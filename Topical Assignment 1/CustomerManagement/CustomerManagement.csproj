@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Crystal Liles</Description>
+    <Company>Lone Star College</Company>
+    <Copyright>Copyright © 2019</Copyright>
   </PropertyGroup>
 
 </Project>
