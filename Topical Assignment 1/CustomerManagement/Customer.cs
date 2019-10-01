@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 /*
  * Crystal Liles
@@ -40,6 +41,53 @@ namespace CustomerManagement
             {
                 _lastName = value;
             }
+        }
+
+        ///<summary>
+        /// Valadates the customer data.
+        /// </summary>
+        ///<returns></returns>
+        public bool Validate()
+        {
+            var isValid = true;
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+            return isValid;
+        }
+
+        ///<summary>
+        /// Retrieve one customer.
+        /// </summary>
+        ///<returns></returns>
+        public Customer Retreive(int customerID)
+        {
+            // Code that retrieves the defined customer
+
+            return new Customer();
+        }
+
+        ///<summary>
+        /// Retrieve all customers.
+        /// </summary>
+        ///<returns></returns>
+        public List<Customer> Retreive()
+        {
+            // Code that retrieves all of the customers
+
+            return new List<Customer>();
+        }
+
+        ///<summary>
+        /// Saves the current customer.
+        /// </summary>
+        ///<returns></returns>
+        public bool Save()
+        {
+            //Code that saves the defined cusotmer
+
+            return true;
+
         }
 
     }
