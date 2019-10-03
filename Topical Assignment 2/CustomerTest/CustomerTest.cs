@@ -90,7 +90,7 @@ namespace CustomerTest
             //-- Arrange
             var customer = new Customer
             {
-                LastName = "Crystal",
+                LastName = "Liles",
                 EmailAddress = "crallen@my.lonestar,edu"
             };
 

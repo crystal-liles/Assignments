@@ -9,6 +9,7 @@ namespace CustomerManagement
 {
     public class Customer
     {
+        #region Properies, variables, and fields.
         public int CustomerID { get; private set; }
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
@@ -28,6 +29,7 @@ namespace CustomerManagement
         }
         public static int InstanceCount { get; set; }
         private string _lastName;
+        #endregion
 
 
         public string LastName
@@ -48,11 +50,16 @@ namespace CustomerManagement
         ///<returns></returns>
         public bool Validate()
         {
-            var isValid = true;
-            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
-            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+            //var isValid = true;
+            //if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            //if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
 
-            return isValid;
+            //return isValid;
+
+            return !string.IsNullOrWhiteSpace(LastName) &&
+                   !string.IsNullOrWhiteSpace(EmailAddress);
+
+            
         }
 
         ///<summary>
@@ -83,7 +90,7 @@ namespace CustomerManagement
         ///<returns></returns>
         public bool Save()
         {
-            //Code that saves the defined cusotmer
+            //Code that saves the defined customer
 
             return true;
 
