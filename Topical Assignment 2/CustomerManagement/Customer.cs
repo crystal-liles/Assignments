@@ -66,34 +66,21 @@ namespace CustomerManagement
         /// Retrieve one customer.
         /// </summary>
         ///<returns></returns>
-        public Customer Retreive(int customerID)
-        {
-            // Code that retrieves the defined customer
+        public Customer Retreive(int customerID) => new Customer();
 
-            return new Customer();
-        }
 
         ///<summary>
         /// Retrieve all customers.
         /// </summary>
         ///<returns></returns>
-        public List<Customer> Retreive()
-        {
-            // Code that retrieves all of the customers
+        public List<Customer> Retreive() => new List<Customer>();
 
-            return new List<Customer>();
-        }
 
         ///<summary>
         /// Saves the current customer.
         /// </summary>
         ///<returns></returns>
-        public bool Save()
-        {
-            //Code that saves the defined customer
-
-            return true;
-
-        }
+        public bool Save(Customer customer) => true; 
+            
     }
 }
