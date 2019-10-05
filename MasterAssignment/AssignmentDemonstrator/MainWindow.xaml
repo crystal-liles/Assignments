@@ -8,5 +8,18 @@
         Title="Master Assignment - Crystal Liles" Height="450" Width="800">
     <Grid>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background="Blue"></Border>
+        <Border Grid.Row="0" Grid.Column="1" Background="White"></Border>
+        <Border Grid.Row="1" Grid.Column="1" Background="Red"></Border>
+        <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
+               Margin="30, 30, 30, 30" Stretch="Uniform" Source="/star.png"/>
     </Grid>
 </Window>
