@@ -49,7 +49,7 @@ namespace CustomerManagement
         ///Validates the product data.
         /// </summary>
         /// <return></return>
-        
+
         public bool Validate()
         {
             var isValid = true;

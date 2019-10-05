@@ -13,18 +13,20 @@ namespace CustomerManagement
         public int CustomerID { get; private set; }
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
-
         public string FullName
         {
 
             get
             {
                 if (!string.IsNullOrWhiteSpace(FirstName) &&
-                    !string.IsNullOrWhiteSpace(LastName))
+                   !string.IsNullOrWhiteSpace(LastName))
+                
                 {
-                    return $"{LastName}, {FirstName}";
+                   return $"{LastName}, {FirstName}";
                 }
                 return LastName + FirstName;
+
+                
             }
         }
         public static int InstanceCount { get; set; }
@@ -50,16 +52,8 @@ namespace CustomerManagement
         ///<returns></returns>
         public bool Validate()
         {
-            //var isValid = true;
-            //if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
-            //if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
-
-            //return isValid;
-
-            return !string.IsNullOrWhiteSpace(LastName) &&
-                   !string.IsNullOrWhiteSpace(EmailAddress);
-
-            
+            return !LastName.IsNullOrWhiteSpace() &&
+                   !EmailAddress.IsNullOrWhiteSpace();
         }
 
         ///<summary>
