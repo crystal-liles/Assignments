@@ -8,34 +8,44 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CustomerManagementTests
 {
-    class ProductTest
+    [TestClass]
+    public class ProductTest
     {
+        [TestMethod]
         public void FullNameTestValid()
+        {        
+        //-- Arrange
+            var product = new Product()
+            {
+                ProductName = "Product",
+                CurrentPrice = 1
+            };
+        bool expected = true;
+    
+        //--Act
+        bool actual = product.Validate();
+
+        //-- Assert
+        Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ProductNameEmpty()
         {
             //-- Arrange
+            var product = new Product()
+            {
+                CurrentPrice = 1
+            };
+            var expected = false;
 
-            //--Act
-
-            //-- Assert
-
-        }
-        public void FullNameFirstNameEmpty()
-        {
-            //-- Arrange
-
-            //--Act
+            //-- Act
+            bool actual = product.Validate();
 
             //-- Assert
+            Assert.AreEqual(expected, actual);
 
         }
-        public void FullNameLastNameEmpty()
-        {
-            //-- Arrange
-
-            //--Act
-
-            //-- Assert
-
-        }
+        
     }
 }

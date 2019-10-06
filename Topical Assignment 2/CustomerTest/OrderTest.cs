@@ -8,31 +8,35 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CustomerManagementTests
 {
-    class OrderTest
+    [TestClass]
+    public class OrderTest
     {
+        [TestMethod]
         public void OrderValidateValid()
         {
             //-- Arrange
-            var order = new Order
-            {
-                //OrderDate(null);
-            };
-
-            var expected = false;
+            var order = new Order();
+            order.OrderDate = DateTimeOffset.Now;
+            bool expected = true;
 
             //-- Act
-            var actual = order.Validate();
+            bool actual = order.Validate();
 
             //-- Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
         public void OrderValidateNoOrderDate()
         {
             //-- Arrange
+            var order = new Order();
+            var expected = false;
 
-            //--Act
+            //-- Act
+            bool actual = order.Validate();
 
             //-- Assert
+            Assert.AreEqual(expected, actual);
 
         }
     }

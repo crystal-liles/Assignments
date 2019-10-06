@@ -23,6 +23,7 @@ namespace AssignmentDemonstrator
         public MainWindow()
         {
             InitializeComponent();
+            Close();
         }
     }
 }
