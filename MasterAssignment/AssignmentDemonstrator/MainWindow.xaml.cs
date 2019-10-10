@@ -1,5 +1,9 @@
 ﻿using System.Windows;
 
+/*
+ * Crystal Liles
+ */
+
 namespace AssignmentDemonstrator
 {
     /// <summary>
