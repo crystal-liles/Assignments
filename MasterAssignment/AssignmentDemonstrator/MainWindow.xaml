@@ -20,7 +20,7 @@
         <Border Grid.Row="0" Grid.Column="1" Background="White"></Border>
         <Border Grid.Row="1" Grid.Column="1" Background="Red"></Border>
         <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
-               Margin="18,5,12,24" Stretch="Uniform" Source="/star.png" RenderTransformOrigin="0.339,0.505"/>
+               Margin="18,5,12,24" Stretch="Uniform" Source="/star.png"/>
 
     </Grid>
     
