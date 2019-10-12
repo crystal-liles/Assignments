@@ -24,5 +24,10 @@ namespace BattleshipUI
         {
             InitializeComponent();
         }
+
+        private void TxtPlayerName_TextChanged()
+        {
+
+        }
     }
 }

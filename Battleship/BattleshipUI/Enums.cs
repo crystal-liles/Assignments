@@ -8,14 +8,12 @@ using System.Text;
 
 namespace BattleshipUI
 {
-    class Enums
-    {
-        ///<summary>
-        /// The ShipCellSegment enum represents to possible content
-        /// of each cell (grid component) in the game.
-        /// </summary>
-        public enum ShipCellSegment
-        {
+     ///<summary>
+     /// The ShipCellSegment enum represents to possible content
+     /// of each cell (grid component) in the game.
+     /// </summary>
+     public enum ShipCellSegment
+     {
             Water,
             Single,
             Left,
@@ -24,7 +22,5 @@ namespace BattleshipUI
             Bottom,
             Vertical,
             Horizontal
-        }
-
-    }
+     }
 }

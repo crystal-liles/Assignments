@@ -7,11 +7,10 @@
         mc:Ignorable="d"
         Title="Battleship – Crystal Liles" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="114,14,0,0" Text="TxtPlayerName" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Player Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="TxtPlayerName" HorizontalAlignment="Left" Margin="114,14,0,0" Text="Text Box" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Player Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="87"/>
         <Border BorderThickness="1" BorderBrush="Black">
-            <Canvas>
-                <Canvas Height="127" Width="310" Canvas.Top="63" Canvas.Left="40">
+            <Canvas Height="130" Width="310" Canvas.Top="60" Canvas.Left="40" Margin="35,60,453,245">
                     <Button Content="Button" Canvas.Left="50" Canvas.Top="10" Height="50" Width="50"/>
                     <Button Content="Button" Canvas.Left="105" Canvas.Top="10" Height="50" Width="50"/>
                     <Button Content="Button" Canvas.Left="160" Canvas.Top="10" Height="50" Width="50"/>
@@ -21,9 +20,8 @@
                     <Button Content="Button" Canvas.Left="160" Canvas.Top="65" Height="50" Width="50"/>
                     <Button Content="Button" Canvas.Left="215" Canvas.Top="65" Height="50" Width="50"/>
                 </Canvas>
-            </Canvas>
         </Border>
-        <Button Content="BtnNewGame" HorizontalAlignment="Left" Margin="292,14,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtwNewGame" Content="New Game" HorizontalAlignment="Left" Margin="292,14,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
