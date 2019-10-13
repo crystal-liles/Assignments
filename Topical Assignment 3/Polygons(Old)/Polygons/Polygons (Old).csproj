@@ -59,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Program%28Old%29.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -68,9 +68,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Polygons.Library\Polygons.Library.csproj">
+    <ProjectReference Include="..\Polygons.Library\Polygons.Library %28Old%29.csproj">
       <Project>{db97590b-446b-4d3b-945f-0df1380e0f6d}</Project>
-      <Name>Polygons.Library</Name>
+      <Name>Polygons.Library %28Old%29</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
