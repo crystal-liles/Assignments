@@ -10,19 +10,13 @@
         <ImageBrush Stretch="None" ImageSource="Images/battleship_waterview.jpg"/>
     </Window.Background>
     <Grid>
-        <TextBox x:Name="txtPlayerName" HorizontalAlignment="Left" Margin="114,14,0,0" Text="Crystal Liles" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Player Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="87"/>
-        <Canvas Width="310" Canvas.Top="60" Canvas.Left="40" Margin="35,60,453,117">
-            <Button x:Name="BtwResetGame" Content="Reset Game" Canvas.Left="10" Canvas.Top="10" Height="25" Width="140" Click="BtwResetGame_Click"/>
-            <Button x:Name="BtwShowOneCell" Content="Show One Cell" Canvas.Left="10" Canvas.Top="45" Height="25" Width="140" Click="BtwShowOneCell_Click"/>
-            <Button x:Name="BtwShowSolution" Content="Show Solution" Canvas.Left="10" Canvas.Top="80" Height="25" Width="140" Click="BtwShowSolution_Click"/>
-            <Button x:Name="BtwAboutBattleship" Content="About Battleship" Canvas.Left="10" Canvas.Top="115" Height="25" Width="140" Click="BtwAboutBattleship_Click"/>
-            <Button x:Name="BtwExit" Content="Exit" Canvas.Left="10" Canvas.Top="150" Height="25" Width="140" Click="BtwExit_Click"/>
-
-        </Canvas>
-
-        <Button x:Name="BtwNewGame" Content="New Game" HorizontalAlignment="Left" Margin="292,14,0,0" VerticalAlignment="Top"/>
-        <local:GameCell x:Name="BtwCellSegment" HorizontalAlignment="Left" Height="100" Margin="419,189,0,0" VerticalAlignment="Top" Width="100"/>
-
+        <Label Content="Player Name:" HorizontalAlignment="Left" Height="24" Margin="23,22,0,0" VerticalAlignment="Top" Width="137" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TxtPlayerName" HorizontalAlignment="Left" Height="20" Margin="123,24,0,0" Text="Prof Reynolds" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
+        <Button x:Name="BtnResetGame" Content="Reset Game" HorizontalAlignment="Left" Height="27" Margin="23,67,0,0" VerticalAlignment="Top" Width="157" Click="BtnResetGame_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="BtnShowOneCell" Content="Show One Cell" HorizontalAlignment="Left" Height="27" Margin="23,99,0,0" VerticalAlignment="Top" Width="157" Click="BtnShowOneCell_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="BtnShowSolution" Content="Show Solution" HorizontalAlignment="Left" Height="27" Margin="23,131,0,0" VerticalAlignment="Top" Width="157" Click="BtnShowSolution_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="BtnAboutBattleship" Content="About Battleship" HorizontalAlignment="Left" Height="28" Margin="23,163,0,0" VerticalAlignment="Top" Width="157" Click="BtnAboutBattleship_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="BtnExit" Content="Exit" HorizontalAlignment="Left" Height="28" Margin="23,196,0,0" VerticalAlignment="Top" Width="157" Click="BtnExit_Click" Grid.ColumnSpan="2"/>
+        <local:GameCell Height="100" Width="100"/>
     </Grid>
 </Window>
