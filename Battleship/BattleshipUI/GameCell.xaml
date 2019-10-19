@@ -7,10 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="100">
     <Grid>
-        <Button x:Name="BtnCellSegment" HorizontalAlignment="Left" Height="100" Margin="0,0,0,0" VerticalAlignment="Top" Width="100" Click="BtnCellSegment_Click">
+        <Button x:Name="BtnCellSegment" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Height="100" Margin="0,0,0,0" Width="100">
             <Button.Background>
                 <ImageBrush ImageSource="Images/battleship_unknown.png"/>
             </Button.Background>
         </Button>
+
     </Grid>
 </UserControl>

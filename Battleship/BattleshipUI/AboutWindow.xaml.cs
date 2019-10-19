@@ -15,9 +15,9 @@ namespace BattleshipUI
     /// <summary>
     /// Interaction logic for About_Window.xaml
     /// </summary>
-    public partial class About_Window : Window
+    public partial class AboutWindow : Window
     {
-        public About_Window()
+        public AboutWindow()
         {
             InitializeComponent();
         }

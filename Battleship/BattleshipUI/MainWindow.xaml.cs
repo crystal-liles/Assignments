@@ -1,4 +1,17 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace BattleshipUI
 {
@@ -9,30 +22,31 @@ namespace BattleshipUI
     {
         public MainWindow()
         {
-            
+            InitializeComponent();
         }
 
-        private void BtwResetGame_Click(object sender, RoutedEventArgs e)
+        private void BtnResetGame_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("BtnResetGame_Click Event");
         }
 
-        private void BtwShowOneCell_Click(object sender, RoutedEventArgs e)
+        private void BtnShowOneCell_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("BtnShowOneCell_Click Event");
         }
 
-        private void BtwShowSolution_Click(object sender, RoutedEventArgs e)
+        private void BtnShowSolution_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("BtwnShowSolution_Click Event");
+            MessageBox.Show("BtnShowSolution_Click Event");
         }
 
-        private void BtwAboutBattleship_Click(object sender, RoutedEventArgs e)
+        private void BtnAboutBattleship_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("BtnAboutBattleship_Click Event");
+            var newForm = new AboutWindow();
+            newForm.Show();
         }
 
-        private void BtwExit_Click(object sender, RoutedEventArgs e)
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
