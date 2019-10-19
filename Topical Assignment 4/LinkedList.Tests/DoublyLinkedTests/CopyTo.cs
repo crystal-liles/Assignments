@@ -1,5 +1,10 @@
 ﻿using System;
 using NUnit.Framework;
+using Shouldly;
+
+/*
+ * Crystal Liles
+ */
 
 namespace DoublyLinkedList.Tests
 {
@@ -17,26 +22,36 @@ namespace DoublyLinkedList.Tests
         [Test, TestCaseSource("CopyTo_Success_Cases")]
         public void CopyTo_Zero_Index(int[] testCase)
         {
+            // Assign
+
             LinkedList<int> list = new LinkedList<int>();
             foreach (int data in testCase)
             {
                 list.AddLast(data);
             }
 
+            // Act
+
             int[] newArray = new int[testCase.Length];
             list.CopyTo(newArray, 0);
 
-            Assert.AreEqual(testCase, newArray, "The resulting array was not correct");
+            // Assert
+
+            testCase.ShouldBe(newArray, "The resulting array was not correct");
         }
 
         [Test, TestCaseSource("CopyTo_Success_Cases")]
         public void CopyTo_Nth_Index(int[] testCase)
         {
+            // Assign
+
             LinkedList<int> list = new LinkedList<int>();
             foreach (int data in testCase)
             {
                 list.AddLast(data);
             }
+
+            // Act
 
             int preOffset = (DateTime.Now.Millisecond % 20) + 1;
             int postOffset = preOffset;
@@ -44,9 +59,11 @@ namespace DoublyLinkedList.Tests
             int[] newArray = new int[preOffset + testCase.Length + postOffset];
             list.CopyTo(newArray, preOffset);
 
+            // Assert
+
             for (int i = preOffset, x = 0; i < (preOffset + testCase.Length); i++, x++)
             {
-                Assert.AreEqual(testCase[x], newArray[i], "The expected value was not correct");
+                testCase[x].ShouldBe(newArray[i], "The expected value was not correct");
             }
         }
 

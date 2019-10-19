@@ -2,6 +2,10 @@
 using NUnit.Framework;
 using Shouldly;
 
+/*
+ * Crystal Liles
+ */
+
 namespace LinkedList.Tests
 {
     [TestFixture]
@@ -40,7 +44,7 @@ namespace LinkedList.Tests
 
             foreach (int value in list)
             {
-                reversed[current].ShouldBe(value, $"The list value at index {current} was incorrect.", current);
+                reversed[current].ShouldBe(value, $"The list value at index {current} was incorrect.");
                 current++;
             }
         }

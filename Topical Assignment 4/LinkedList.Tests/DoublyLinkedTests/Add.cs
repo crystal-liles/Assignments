@@ -1,5 +1,10 @@
 ﻿using System.Linq;
 using NUnit.Framework;
+using Shouldly;
+
+/*
+ * Crystal Liles
+ */
 
 namespace DoublyLinkedList.Tests
 {
@@ -8,28 +13,38 @@ namespace DoublyLinkedList.Tests
     {
         [Test, TestCaseSource("Add_Success_Cases")]
         public void Add_Raw_Value_Success_Cases(int[] testCase)
-        {
+        {   // Assign
+
             LinkedList<int> list = new LinkedList<int>();
             foreach (int value in testCase)
             {
                 list.Add(value);
             }
 
-            Assert.AreEqual(testCase.Length, list.Count, 
+            // Act 
+
+            //Assert
+
+            testCase.Length.ShouldBe(list.Count,
                 "There was an unexpected number of list items");
 
-            Assert.AreEqual(testCase.Last(), list.Head.Value, 
+            testCase.Last().ShouldBe(list.Head.Value, 
                 "The first item value was incorrect");
             
-            Assert.AreEqual(testCase.First(), list.Tail.Value, 
+            testCase.First().ShouldBe(list.Tail.Value, 
                 "The last item value was incorrect");
 
+            //Act
+
             int[] reversed = testCase.Reverse().ToArray();
+
+            // Assert 
+
             int current = 0;
 
             foreach (int value in list)
             {
-                Assert.AreEqual(reversed[current], value, "The list value at index {0} was incorrect.", current);
+                reversed[current].ShouldBe( value, $"The list value at index {current} was incorrect.");
                 current++;
             }
         }
@@ -37,27 +52,38 @@ namespace DoublyLinkedList.Tests
         [Test, TestCaseSource("Add_Success_Cases")]
         public void AddFirst_Node_Value_Success_Cases(int[] testCase)
         {
+            // Assign
+
             LinkedList<int> list = new LinkedList<int>();
             foreach (int value in testCase)
             {
                 list.AddFirst(new LinkedListNode<int>(value));
             }
 
-            Assert.AreEqual(testCase.Length, list.Count,
+            // Act
+
+            // Assert
+
+            testCase.Length.ShouldBe(list.Count,
                 "There was an unexpected number of list items");
 
-            Assert.AreEqual(testCase.Last(), list.Head.Value,
+            testCase.Last().ShouldBe(list.Head.Value,
                 "The first item value was incorrect");
 
-            Assert.AreEqual(testCase.First(), list.Tail.Value,
+            testCase.First().ShouldBe(list.Tail.Value,
                 "The last item value was incorrect");
 
+            // Act 
+
             int[] reversed = testCase.Reverse().ToArray();
+
+            // Assert 
+
             int current = 0;
 
             foreach (int value in list)
             {
-                Assert.AreEqual(reversed[current], value, "The list value at index {0} was incorrect.", current);
+                reversed[current].ShouldBe(value, $"The list value at index {current} was incorrect.");
                 current++;
             }
         }
@@ -65,25 +91,31 @@ namespace DoublyLinkedList.Tests
         [Test, TestCaseSource("Add_Success_Cases")]
         public void AddLast_Raw_Value_Success_Cases(int[] testCase)
         {
+            // Assign
+
             LinkedList<int> list = new LinkedList<int>();
             foreach (int value in testCase)
             {
                 list.AddLast(value);
             }
 
-            Assert.AreEqual(testCase.Length, list.Count,
+            // Act
+
+            testCase.Length.ShouldBe(list.Count,
                 "There was an unexpected number of list items");
 
-            Assert.AreEqual(testCase.First(), list.Head.Value,
+            testCase.First().ShouldBe(list.Head.Value,
                 "The first item value was incorrect");
 
-            Assert.AreEqual(testCase.Last(), list.Tail.Value,
+            testCase.Last().ShouldBe(list.Tail.Value,
                 "The last item value was incorrect");
+
+            //Assert
 
             int current = 0;
             foreach (int value in list)
             {
-                Assert.AreEqual(testCase[current], value, "The list value at index {0} was incorrect.", current);
+                testCase[current].ShouldBe(value, $"The list value at index {current} was incorrect.");
                 current++;
             }
         }
@@ -91,25 +123,31 @@ namespace DoublyLinkedList.Tests
         [Test, TestCaseSource("Add_Success_Cases")]
         public void AddLast_Node_Value_Success_Cases(int[] testCase)
         {
+            // Assign
+
             LinkedList<int> list = new LinkedList<int>();
             foreach (int value in testCase)
             {
                 list.AddLast(new LinkedListNode<int>(value));
             }
 
-            Assert.AreEqual(testCase.Length, list.Count,
+            // Act
+
+            testCase.Length.ShouldBe(list.Count,
                 "There was an unexpected number of list items");
 
-            Assert.AreEqual(testCase.First(), list.Head.Value,
+            testCase.First().ShouldBe(list.Head.Value,
                 "The first item value was incorrect");
 
-            Assert.AreEqual(testCase.Last(), list.Tail.Value,
+            testCase.Last().ShouldBe(list.Tail.Value,
                 "The last item value was incorrect");
+
+            // Assert
 
             int current = 0;
             foreach (int value in list)
             {
-                Assert.AreEqual(testCase[current], value, "The list value at index {0} was incorrect.", current);
+                testCase[current].ShouldBe(value, $"The list value at index {current} was incorrect.");
                 current++;
             }
         }

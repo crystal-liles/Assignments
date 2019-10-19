@@ -1,4 +1,9 @@
 ﻿using NUnit.Framework;
+using Shouldly;
+
+/*
+ * Crystal Liles
+ */
 
 namespace DoublyLinkedList.Tests
 {
@@ -8,37 +13,50 @@ namespace DoublyLinkedList.Tests
         [Test]
         public void Clear_Empty()
         {
+
+            // Assign
+
             LinkedList<int> list = new LinkedList<int>();
 
-            Assert.IsNull(list.Head);
-            Assert.IsNull(list.Tail);
-            Assert.AreEqual(0, list.Count);
+            // Act
+
+            // Assert
+
+            list.Head.ShouldBeNull();
+            list.Tail.ShouldBeNull();
+            list.Count.ShouldBe(0);
 
             list.Clear();
 
-            Assert.IsNull(list.Head);
-            Assert.IsNull(list.Tail);
-            Assert.AreEqual(0, list.Count);
+            list.Head.ShouldBeNull();
+            list.Tail.ShouldBeNull();
+            list.Count.ShouldBe(0);
         }
 
         [Test, TestCaseSource("Clear_Success_Cases")]
         public void Clear_VariousItems(int[] testCase)
         {
+            // Assign 
+
             LinkedList<int> list = new LinkedList<int>();
             foreach (int value in testCase)
             {
                 list.AddLast(new LinkedListNode<int>(value));
             }
 
-            Assert.IsNotNull(list.Head);
-            Assert.IsNotNull(list.Tail);
-            Assert.AreEqual(testCase.Length, list.Count);
+            // Act
+
+            // Assert
+
+            list.Head.ShouldNotBeNull();
+            list.Tail.ShouldNotBeNull();
+            list.Count.ShouldBe(testCase.Length);
 
             list.Clear();
 
-            Assert.IsNull(list.Head);
-            Assert.IsNull(list.Tail);
-            Assert.AreEqual(0, list.Count);
+            list.Head.ShouldBeNull();
+            list.Tail.ShouldBeNull();
+            list.Count.ShouldBe(0);
         }
 
         static object[] Clear_Success_Cases =

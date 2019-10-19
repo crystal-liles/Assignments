@@ -1,4 +1,9 @@
 ﻿using NUnit.Framework;
+using Shouldly;
+
+/*
+ * Crystal Liles
+ */
 
 namespace DoublyLinkedList.Tests
 {
@@ -8,32 +13,53 @@ namespace DoublyLinkedList.Tests
         [Test]
         public void Find_Empty()
         {
+            // Assign
+
             LinkedList<int> list = new LinkedList<int>();
-            Assert.IsFalse(list.Contains(10), "Nothing should have been found.");
+
+            // Act
+
+            // Assert
+
+            list.Contains(10).ShouldBeFalse("Nothing should have been found.");
         }
 
         [Test, TestCaseSource("Find_Missing_Cases")]
         public void Find_Missing(int[] testData, int value)
         {
+            // Assign
+
             LinkedList<int> list = new LinkedList<int>();
+
+            // Act 
+
             foreach (int data in testData)
             {
                 list.AddLast(new LinkedListNode<int>(data));
             }
 
-            Assert.IsFalse(list.Contains(value), "Nothing should have been found.");
+            // Assert
+
+            list.Contains(value).ShouldBeFalse("Nothing should have been found.");
         }
 
         [Test, TestCaseSource("Find_Found_Cases")]
         public void Find_Found(int[] testData, int value)
         {
+            // Assign
+
             LinkedList<int> list = new LinkedList<int>();
+
+            // Act
+
             foreach (int data in testData)
             {
                 list.AddLast(new LinkedListNode<int>(data));
             }
 
-            Assert.IsTrue(list.Contains(value), "There should have been a node found");
+            // Assert
+
+            list.Contains(value).ShouldBeTrue("There should have been a node found");
         }
 
         static object[] Find_Missing_Cases =

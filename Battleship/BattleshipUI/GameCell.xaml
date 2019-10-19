@@ -5,8 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BattleshipUI"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="100" d:DesignWidth="100">
     <Grid>
-            
+        <Button x:Name="BtnCellSegment" HorizontalAlignment="Left" Height="100" Margin="0,0,0,0" VerticalAlignment="Top" Width="100" Click="BtnCellSegment_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Images/battleship_unknown.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </UserControl>

@@ -1,4 +1,7 @@
-﻿
+﻿/*
+ * Crystal Liles
+ */
+
 namespace DoublyLinkedList
 {
     /// <summary>

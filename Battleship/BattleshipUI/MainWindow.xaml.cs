@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace BattleshipUI
 {
@@ -22,12 +9,32 @@ namespace BattleshipUI
     {
         public MainWindow()
         {
-            InitializeComponent();
+            
         }
 
-        private void TxtPlayerName_TextChanged()
+        private void BtwResetGame_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("BtnResetGame_Click Event");
+        }
 
+        private void BtwShowOneCell_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("BtnShowOneCell_Click Event");
+        }
+
+        private void BtwShowSolution_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("BtwnShowSolution_Click Event");
+        }
+
+        private void BtwAboutBattleship_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("BtnAboutBattleship_Click Event");
+        }
+
+        private void BtwExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
