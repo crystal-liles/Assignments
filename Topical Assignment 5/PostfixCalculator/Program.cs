@@ -12,8 +12,8 @@ namespace PostfixCalculator
         static void Main(string[] args)
         {
             Console.WriteLine();
-            Console.WriteLine("<< your name >>");
-            Console.WriteLine("Assignment 4, Project 1");
+            Console.WriteLine("<< Crystal Liles >>");
+            Console.WriteLine("Assignment 5");
             Console.WriteLine();
 
             // The stack of integers not yet operated on
@@ -35,6 +35,21 @@ namespace PostfixCalculator
                     {
                         case "+":
                             values.Push(leftSideExpressionValue + rightSideExpressionValue);
+                            break;
+                        case "*":
+                            values.Push(leftSideExpressionValue * rightSideExpressionValue);
+                            break;
+                        case "-":
+                            values.Push(leftSideExpressionValue - rightSideExpressionValue);
+                            break;
+                        case "/":
+                            values.Push(leftSideExpressionValue / rightSideExpressionValue);
+                            break;
+                        case "^":
+                            values.Push((int)Math.Pow(leftSideExpressionValue, rightSideExpressionValue));
+                            break;
+                        case "%":
+                            values.Push(leftSideExpressionValue % rightSideExpressionValue);
                             break;
                         default:
                             throw new ArgumentException($"Unrecognized token: {token}");

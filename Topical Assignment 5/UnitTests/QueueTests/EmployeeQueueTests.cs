@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using NUnit.Framework;
 using Shouldly;
@@ -8,7 +8,7 @@ using Shouldly;
  */
 namespace UnitTests.QueueTests
 {
-    public class NetBasicQueueTests
+    public class EmployeeQueueTests
     {
         [SetUp]
         public void Setup()
@@ -17,20 +17,24 @@ namespace UnitTests.QueueTests
 
         // normally, this would be at the bottom of the unit test
         // notice, this static array is utilized by the various individual tests
-        private static readonly int[][] QueueTestData = new[]
+        private static readonly string[][] QueueTestData = new[]
         {
-            new int[0],
-            new [] { 0 },
-            new [] { 0, 1 },
-            new [] { 0, 1, 2 },
-            new [] { 0, 1, 2, 3 },
-            new [] { 0, 1, 2, 3, 4 },
-            new [] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 },
+            new string[] {
+                "Fred Flintstone",
+                "Wilma Flintstone",
+                "Barney Rubble",
+                "Fred Mertz",
+                "Ethel Mertz",
+                "Fred Astair",
+                "Ginger Rogers",
+                "Fred Savage",
+                "Winnie Cooper"
+                }
         };
 
         [Test]
         [TestCaseSource("QueueTestData")]
-        public void Queue_Success_Cases(int[] testData) // note: this is from where the test data arrives
+        public void Queue_Success_Cases(string[] testData) // note: this is from where the test data arrives
         {
             var queue = new Queue(); // this is the non-generic class. Note the usings!
 
@@ -51,7 +55,7 @@ namespace UnitTests.QueueTests
 
             // here we test the queue enumeration
             var counter = 0; // this helps keep synchronized to the test cases
-            foreach (int value in queue)
+            foreach (string value in queue)
             {
                 value.ShouldBe(testData[counter], "The enumeration is not accurate");
                 counter++;
@@ -76,9 +80,9 @@ namespace UnitTests.QueueTests
             var queue = new Queue();
 
             Should.Throw<InvalidOperationException>(() =>
-                {
-                    var dequeuedValue = queue.Dequeue();
-                }
+            {
+                var dequeuedValue = queue.Dequeue();
+            }
             );
         }
 
@@ -86,14 +90,14 @@ namespace UnitTests.QueueTests
         public void Dequeue_From_Empty_Throws_After_Enqueue()
         {
             var queue = new Queue();
-            
+
             queue.Enqueue(1);
             queue.Dequeue();
 
             Should.Throw<InvalidOperationException>(() =>
-                {
-                    var dequeuedValue = queue.Dequeue();
-                }
+            {
+                var dequeuedValue = queue.Dequeue();
+            }
             );
         }
 
@@ -102,9 +106,9 @@ namespace UnitTests.QueueTests
         {
             var queue = new Queue();
             Should.Throw<InvalidOperationException>(() =>
-                {
-                    var dequeuedValue = queue.Peek();
-                }
+            {
+                var dequeuedValue = queue.Peek();
+            }
             );
         }
 
@@ -117,9 +121,9 @@ namespace UnitTests.QueueTests
             queue.Dequeue();
 
             Should.Throw<InvalidOperationException>(() =>
-                {
-                    var dequeuedValue = queue.Peek();
-                }
+            {
+                var dequeuedValue = queue.Peek();
+            }
             );
         }
     }

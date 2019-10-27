@@ -51,7 +51,7 @@ namespace UnitTests.StackTests
             stack.Count.ShouldBe(testData.Length, "The end count was not as expected");
 
             // here we test the stack enumeration
-            var counter = stack.Count; // this helps keep syncronized to the test cases
+            var counter = stack.Count; // this helps keep synchronized to the test cases
             foreach (int value in stack)
             {
                 counter--;
