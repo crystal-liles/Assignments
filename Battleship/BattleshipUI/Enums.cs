@@ -21,6 +21,7 @@ namespace BattleshipUI
             Top,
             Bottom,
             Vertical,
-            Horizontal
+            Horizontal,
+            Unknown
      }
 }

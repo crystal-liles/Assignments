@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security.Policy;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+
 
 
 /*
@@ -21,15 +23,13 @@ namespace BattleshipUI
         public int GameCellColumn { get; set; }
         private bool _shipSegmentShown;
 
-        public bool ShipSegmentShown
-        {
+        public bool ShipSegmentShown {
             get => _shipSegmentShown;
             set
             {
                 _shipSegmentShown = value;
                 DisplayButtonBackground();
-            }
-        }
+            } }
 
         private ShipCellSegment _shipSegment = ShipCellSegment.Unknown;
         public ShipCellSegment ShipSegment
@@ -41,7 +41,19 @@ namespace BattleshipUI
                 DisplayButtonBackground();
             }
         }
-
+        private readonly IDictionary<ShipCellSegment, Uri> _shipCellSegmentUri =
+            new Dictionary<ShipCellSegment, Uri>
+            {
+                {ShipCellSegment.Unknown, new Uri("Images/battleship_unknown.png", UriKind.Relative)},
+                {ShipCellSegment.Water, new Uri("Images/battleship_tile.png", UriKind.Relative)},
+                {ShipCellSegment.Single, new Uri("Images/battleship_single.png", UriKind.Relative)},
+                {ShipCellSegment.Left, new Uri("Images/battleship_left.png", UriKind.Relative)},
+                {ShipCellSegment.Right, new Uri("Images/battleship_right.png", UriKind.Relative)},
+                {ShipCellSegment.Top, new Uri("Images/battleship_top.png", UriKind.Relative)},
+                {ShipCellSegment.Bottom, new Uri("Images/battleship_bottom.png", UriKind.Relative)},
+                {ShipCellSegment.Vertical, new Uri("Images/battleship_vert.png", UriKind.Relative)},
+                {ShipCellSegment.Horizontal, new Uri("Images/battleship_horz.png", UriKind.Relative)},
+            };
         private void DisplayButtonBackground()
         {
             if (_shipSegmentShown)
@@ -50,7 +62,7 @@ namespace BattleshipUI
                 {
                     case ShipCellSegment.Unknown:
                     {
-                        CalendarDateChangedEventArgs uri = _shipSegmentUri[ShipCellSegmetn.Unkown];
+                        var uri = _shipCellSegmentUri[ShipCellSegment.Unknown];
                         var bitmapImage = new BitmapImage(uri);
                         var brush = new ImageBrush();
                         brush.ImageSource = bitmapImage;
