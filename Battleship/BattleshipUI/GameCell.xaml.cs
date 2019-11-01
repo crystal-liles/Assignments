@@ -18,6 +18,7 @@ namespace BattleshipUI
         public GameCell()
         {
             InitializeComponent();
+
         }
         public int GameCellRow { get; set; }
         public int GameCellColumn { get; set; }
@@ -34,10 +35,10 @@ namespace BattleshipUI
         private ShipCellSegment _shipSegment = ShipCellSegment.Unknown;
         public ShipCellSegment ShipSegment
         {
-            get => _shipSegmentShown;
+            get => _shipSegment;
             set
             {
-                _shipSegmentShown = value;
+                _shipSegment = value;
                 DisplayButtonBackground();
             }
         }
@@ -86,6 +87,8 @@ namespace BattleshipUI
         {
             ShipSegmentShown = true;
         }
+
+       
     }
 
 }

@@ -22,12 +22,12 @@ namespace BattleshipUI
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeAndSetupNewGame();
         }
 
         private void BtnResetGame_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("BtnResetGame_Click Event");
+            InitializeAndSetupNewGame();
         }
 
         private void BtnShowOneCell_Click(object sender, RoutedEventArgs e)
@@ -50,7 +50,29 @@ namespace BattleshipUI
         {
             Close();
         }
+        private void InitializeAndSetupNewGame()
+        {
+            foreach (var uc in ButtonCanvas.Children)
+            {
+                if (uc is GameCell gc)
+                {
+                    gc.ShipSegment = ShipCellSegment.Water;
+                    gc.ShipSegmentShown = false;
+                }
+            }
 
-        
+            {
+                GameCell00.ShipSegment = ShipCellSegment.Left;
+                GameCell01.ShipSegment = ShipCellSegment.Horizontal;
+                GameCell02.ShipSegment = ShipCellSegment.Horizontal;
+                GameCell03.ShipSegment = ShipCellSegment.Right;
+                GameCell14.ShipSegment = ShipCellSegment.Top;
+                GameCell24.ShipSegment = ShipCellSegment.Vertical;
+                GameCell34.ShipSegment = ShipCellSegment.Bottom;
+                GameCell41.ShipSegment = ShipCellSegment.Single;
+            }
+        }
+
+
     }
 }
