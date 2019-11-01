@@ -74,19 +74,19 @@
             // MenuItemOpen
             // 
             this.MenuItemOpen.Name = "MenuItemOpen";
-            this.MenuItemOpen.Size = new System.Drawing.Size(232, 48);
+            this.MenuItemOpen.Size = new System.Drawing.Size(403, 48);
             this.MenuItemOpen.Text = "Open";
             this.MenuItemOpen.Click += new System.EventHandler(this.MenuItemOpen_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(229, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(400, 6);
             // 
             // MenuItemHelp
             // 
             this.MenuItemHelp.Name = "MenuItemHelp";
-            this.MenuItemHelp.Size = new System.Drawing.Size(232, 48);
+            this.MenuItemHelp.Size = new System.Drawing.Size(403, 48);
             this.MenuItemHelp.Text = "E&xit";
             this.MenuItemHelp.Click += new System.EventHandler(this.MenuItemHelp_Click);
             // 
@@ -101,7 +101,7 @@
             // MenuItemAbout
             // 
             this.MenuItemAbout.Name = "MenuItemAbout";
-            this.MenuItemAbout.Size = new System.Drawing.Size(240, 48);
+            this.MenuItemAbout.Size = new System.Drawing.Size(403, 48);
             this.MenuItemAbout.Text = "&About";
             this.MenuItemAbout.Click += new System.EventHandler(this.MenuItemAbout_Click);
             // 
@@ -141,9 +141,9 @@
             this.ListBoxOutput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListBoxOutput.FormattingEnabled = true;
             this.ListBoxOutput.ItemHeight = 29;
-            this.ListBoxOutput.Location = new System.Drawing.Point(0, 523);
+            this.ListBoxOutput.Location = new System.Drawing.Point(0, 35);
             this.ListBoxOutput.Name = "ListBoxOutput";
-            this.ListBoxOutput.Size = new System.Drawing.Size(691, 3);
+            this.ListBoxOutput.Size = new System.Drawing.Size(691, 491);
             this.ListBoxOutput.TabIndex = 1;
             // 
             // TxtFilePath
@@ -154,7 +154,7 @@
             this.TxtFilePath.Multiline = true;
             this.TxtFilePath.Name = "TxtFilePath";
             this.TxtFilePath.ReadOnly = true;
-            this.TxtFilePath.Size = new System.Drawing.Size(691, 523);
+            this.TxtFilePath.Size = new System.Drawing.Size(691, 35);
             this.TxtFilePath.TabIndex = 0;
             this.TxtFilePath.Text = "File Path to be seen here.";
             // 

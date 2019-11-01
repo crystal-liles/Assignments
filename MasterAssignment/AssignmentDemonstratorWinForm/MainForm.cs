@@ -54,6 +54,8 @@ namespace AssignmentDemonstratorWinForm
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 
+                ListBoxOutput.Items.Clear();
+
                 TxtFilePath.Text = openFileDialog.SafeFileName;
                 using (StreamReader sr = File.OpenText(openFileDialog.FileName))
                 {
