@@ -22,6 +22,22 @@ namespace BattleshipUI
     {
         public MainWindow()
         {
+            /*
+             * ProfReynolds
+             * somehow you ended up with this:
+            InitializeAndSetupNewGame();
+             *
+             * but it should be this:
+             */
+            InitializeComponent();
+        }
+
+        /*
+         * ProfReynolds
+         * I added this for you
+         */
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
             InitializeAndSetupNewGame();
         }
 

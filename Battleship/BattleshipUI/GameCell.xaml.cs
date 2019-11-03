@@ -22,8 +22,8 @@ namespace BattleshipUI
         }
         public int GameCellRow { get; set; }
         public int GameCellColumn { get; set; }
-        private bool _shipSegmentShown;
 
+        private bool _shipSegmentShown;
         public bool ShipSegmentShown {
             get => _shipSegmentShown;
             set
@@ -42,6 +42,7 @@ namespace BattleshipUI
                 DisplayButtonBackground();
             }
         }
+
         private readonly IDictionary<ShipCellSegment, Uri> _shipCellSegmentUri =
             new Dictionary<ShipCellSegment, Uri>
             {
@@ -59,6 +60,11 @@ namespace BattleshipUI
         {
             if (_shipSegmentShown)
             {
+                /*
+                 * ProfReynolds
+                 * you need the other cases!
+                 * I added stubs for you to populate
+                 */
                 switch (_shipSegment)
                 {
                     case ShipCellSegment.Unknown:
@@ -71,6 +77,24 @@ namespace BattleshipUI
                         BtnCellSegment.Background = brush;
                         break;
                     }
+                    case ShipCellSegment.Water:
+                        break;
+                    case ShipCellSegment.Single:
+                        break;
+                    case ShipCellSegment.Left:
+                        break;
+                    case ShipCellSegment.Right:
+                        break;
+                    case ShipCellSegment.Top:
+                        break;
+                    case ShipCellSegment.Bottom:
+                        break;
+                    case ShipCellSegment.Vertical:
+                        break;
+                    case ShipCellSegment.Horizontal:
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
                 }
             }
             else
