@@ -22,13 +22,6 @@ namespace BattleshipUI
     {
         public MainWindow()
         {
-            /*
-             * ProfReynolds
-             * somehow you ended up with this:
-            InitializeAndSetupNewGame();
-             *
-             * but it should be this:
-             */
             InitializeComponent();
         }
 

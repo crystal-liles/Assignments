@@ -60,11 +60,6 @@ namespace BattleshipUI
         {
             if (_shipSegmentShown)
             {
-                /*
-                 * ProfReynolds
-                 * you need the other cases!
-                 * I added stubs for you to populate
-                 */
                 switch (_shipSegment)
                 {
                     case ShipCellSegment.Unknown:
@@ -78,21 +73,85 @@ namespace BattleshipUI
                         break;
                     }
                     case ShipCellSegment.Water:
+                    {
+                        var uri = _shipCellSegmentUri[ShipCellSegment.Water];
+                        var bitmapImage = new BitmapImage(uri);
+                        var brush = new ImageBrush();
+                        brush.ImageSource = bitmapImage;
+                        brush.Stretch = Stretch.Fill;
+                        BtnCellSegment.Background = brush;
                         break;
+                    }
                     case ShipCellSegment.Single:
+                    {
+                        var uri = _shipCellSegmentUri[ShipCellSegment.Single];
+                        var bitmapImage = new BitmapImage(uri);
+                        var brush = new ImageBrush();
+                        brush.ImageSource = bitmapImage;
+                        brush.Stretch = Stretch.Fill;
+                        BtnCellSegment.Background = brush;
                         break;
+                    }
                     case ShipCellSegment.Left:
+                    {
+                        var uri = _shipCellSegmentUri[ShipCellSegment.Left];
+                        var bitmapImage = new BitmapImage(uri);
+                        var brush = new ImageBrush();
+                        brush.ImageSource = bitmapImage;
+                        brush.Stretch = Stretch.Fill;
+                        BtnCellSegment.Background = brush;
                         break;
+                    }
                     case ShipCellSegment.Right:
+                    {
+                        var uri = _shipCellSegmentUri[ShipCellSegment.Right];
+                        var bitmapImage = new BitmapImage(uri);
+                        var brush = new ImageBrush();
+                        brush.ImageSource = bitmapImage;
+                        brush.Stretch = Stretch.Fill;
+                        BtnCellSegment.Background = brush;
                         break;
+                    }
                     case ShipCellSegment.Top:
+                    {
+                        var uri = _shipCellSegmentUri[ShipCellSegment.Top];
+                        var bitmapImage = new BitmapImage(uri);
+                        var brush = new ImageBrush();
+                        brush.ImageSource = bitmapImage;
+                        brush.Stretch = Stretch.Fill;
+                        BtnCellSegment.Background = brush;
                         break;
+                    }
                     case ShipCellSegment.Bottom:
+                    {
+                        var uri = _shipCellSegmentUri[ShipCellSegment.Bottom];
+                        var bitmapImage = new BitmapImage(uri);
+                        var brush = new ImageBrush();
+                        brush.ImageSource = bitmapImage;
+                        brush.Stretch = Stretch.Fill;
+                        BtnCellSegment.Background = brush;
                         break;
+                    }
                     case ShipCellSegment.Vertical:
+                    {
+                        var uri = _shipCellSegmentUri[ShipCellSegment.Vertical];
+                        var bitmapImage = new BitmapImage(uri);
+                        var brush = new ImageBrush();
+                        brush.ImageSource = bitmapImage;
+                        brush.Stretch = Stretch.Fill;
+                        BtnCellSegment.Background = brush;
                         break;
+                    }
                     case ShipCellSegment.Horizontal:
+                    {
+                        var uri = _shipCellSegmentUri[ShipCellSegment.Horizontal];
+                        var bitmapImage = new BitmapImage(uri);
+                        var brush = new ImageBrush();
+                        brush.ImageSource = bitmapImage;
+                        brush.Stretch = Stretch.Fill;
+                        BtnCellSegment.Background = brush;
                         break;
+                    }
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
