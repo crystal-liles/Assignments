@@ -1,22 +1,28 @@
 ﻿using BinaryTree;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Shouldly;
+using NUnit.Framework;
+
+/*
+ * Crystal Liles
+ */
 
 namespace BinaryTreeTests
 {
-    [TestClass]
+    [TestFixture]
     public class RemoveTests
     {
-        [TestMethod]
+        [TestCase]
         public void Remove_Head_Only_Node()
         {
             BinaryTree<int> tree = new BinaryTree<int>();
 
             tree.Add(4);
 
-            Assert.IsTrue(tree.Remove(4), "Remove should return true for found node");
+            //Assert.IsTrue(tree.Remove(4), "Remove should return true for found node");
+            tree.Remove(4).ShouldBeTrue("Remove should return true for found node");
         }
 
-        [TestMethod]
+        [TestCase]
         public void Remove_Missing_From_Tree()
         {
             BinaryTree<int> tree = new BinaryTree<int>();
@@ -33,7 +39,10 @@ namespace BinaryTreeTests
 
             foreach(int i in values)
             {
-                Assert.IsFalse(tree.Contains(10), "Tree should not contain 10");
+                //Assert.IsFalse(tree.Contains(10), "Tree should not contain 10");
+
+                tree.Contains(10).ShouldBeFalse("Tree should not contain 10");
+
                 tree.Add(i);
             }
         }
