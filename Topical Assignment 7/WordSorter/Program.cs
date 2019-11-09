@@ -1,6 +1,10 @@
 ﻿using System;
 using BinaryTree;
 
+/*
+ * Crystal Liles
+ */
+
 namespace WordSorter
 {
     class Program

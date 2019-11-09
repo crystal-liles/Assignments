@@ -1,4 +1,5 @@
 ﻿using BinaryTree;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 using NUnit.Framework;
 
@@ -35,9 +36,9 @@ namespace BinaryTreeTests
             //          / \
             //         5   7   
 
-            int[] values = new[]{4, 2, 1, 3, 8, 6, 7, 5};
+            int[] values = new[] { 4, 2, 1, 3, 8, 6, 7, 5 };
 
-            foreach(int i in values)
+            foreach (int i in values)
             {
                 //Assert.IsFalse(tree.Contains(10), "Tree should not contain 10");
 
@@ -45,6 +46,34 @@ namespace BinaryTreeTests
 
                 tree.Add(i);
             }
+        }
+        [TestCase]
+        public void Remove_With_From_Tree_No_Right_Child()
+        {
+            BinaryTree<int> tree = new BinaryTree<int>();
+
+            //         4
+            //       /   \
+            //      2     8 
+            //     /      /
+            //    1      6
+            //          / \
+            //         5   7   
+
+            int[] values = new[] { 4, 2, 1, 8, 6, 7, 5 };
+
+            foreach (int i in values)
+            {
+                tree.Add(i);
+            }
+
+            tree.Contains(2).ShouldBeTrue("Tree should contain 2.");
+
+            tree.Remove(2);
+
+            tree.Contains(2).ShouldBeFalse("Tree should not contain 2.");
+
+
         }
     }
 }
