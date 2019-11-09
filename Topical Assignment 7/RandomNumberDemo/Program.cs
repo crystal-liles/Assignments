@@ -15,6 +15,10 @@ namespace RandomNumberDemo
             Console.Write("Crystal Liles");
             Console.Write("Assignment 7");
 
+            /*
+             * ProfReynolds
+             * declare newRandom before the for loop, then use Next within the loop
+             */
             for (int i = 0; i < 9; i++)
             {
                     int input = new Random.Next(0, 100);

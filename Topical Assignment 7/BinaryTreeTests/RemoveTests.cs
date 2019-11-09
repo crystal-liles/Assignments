@@ -74,6 +74,16 @@ namespace BinaryTreeTests
             tree.Contains(2).ShouldBeFalse("Tree should not contain 2.");
 
 
+            /*
+             * ProfReynolds
+             * consider this!
+             */
+            int[] expectedResult = { 1, 4, 5, 6, 7, 8 };
+            var loopCounter = 0;
+            foreach (var element in tree)
+            {
+                element.ShouldBe(expectedResult[loopCounter++]); // notice I increment loopCounter after I use it
+            }
         }
     }
 }

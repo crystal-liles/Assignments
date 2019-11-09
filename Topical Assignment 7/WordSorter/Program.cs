@@ -22,6 +22,11 @@ namespace WordSorter
                 input = Console.ReadLine();
 
                 // split the line into words (on space)
+                /*
+                 * ProfReynolds
+                 * 1. input, although OK, looks like a reserved word. I would avoid it. perhaps 'inputString' or 'source' would be better
+                 * 2. my compiler is warning about a potential null string but it does not appear to be a problem.
+                 */
                 string[] words = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
                 // add each word to the tree

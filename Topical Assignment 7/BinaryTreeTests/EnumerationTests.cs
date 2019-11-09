@@ -1,4 +1,5 @@
-﻿using BinaryTree;
+﻿using System.Diagnostics;
+using BinaryTree;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 using NUnit.Framework;
@@ -47,8 +48,19 @@ namespace BinaryTreeTests
             {
                 tree.Add(i);
             }
-            
+
             tree.Count.ShouldBe(8, "The item count is 8.");
+
+            /*
+             * ProfReynolds
+             * consider this!
+             */
+            int[] expectedResult = {1, 2, 3, 4, 5, 6, 7, 8};
+            var loopCounter = 0;
+            foreach (var element in tree)
+            {
+                element.ShouldBe(expectedResult[loopCounter++]); // notice I increment loopCounter after I use it
+            }
         }
 
     }

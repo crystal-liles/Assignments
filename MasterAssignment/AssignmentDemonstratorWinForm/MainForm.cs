@@ -48,6 +48,10 @@ namespace AssignmentDemonstratorWinForm
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                /*
+                 * ProfReynolds
+                 * MessageBox no longer needed
+                 */
                 MessageBox.Show(
                     openFileDialog.SafeFileName,
                     "You selected",
