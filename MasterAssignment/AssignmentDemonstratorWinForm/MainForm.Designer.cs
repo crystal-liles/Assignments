@@ -37,7 +37,8 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.lblFilePath = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ListBoxOutput = new System.Windows.Forms.ListBox();
             this.TxtFilePath = new System.Windows.Forms.TextBox();
@@ -57,7 +58,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1042, 45);
+            this.menuStrip1.Size = new System.Drawing.Size(1042, 47);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -68,7 +69,7 @@
             this.toolStripSeparator1,
             this.MenuItemHelp});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(80, 41);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(80, 43);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // MenuItemOpen
@@ -95,13 +96,13 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemAbout});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(95, 41);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(95, 43);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // MenuItemAbout
             // 
             this.MenuItemAbout.Name = "MenuItemAbout";
-            this.MenuItemAbout.Size = new System.Drawing.Size(403, 48);
+            this.MenuItemAbout.Size = new System.Drawing.Size(240, 48);
             this.MenuItemAbout.Text = "&About";
             this.MenuItemAbout.Click += new System.EventHandler(this.MenuItemAbout_Click);
             // 
@@ -109,30 +110,38 @@
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.toolStripProgressBar1,
+            this.lblFilePath});
             this.statusStrip1.Location = new System.Drawing.Point(0, 571);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1042, 48);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "Status and Information Strip";
             // 
-            // toolStripStatusLabel1
+            // toolStripProgressBar1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(347, 37);
-            this.toolStripStatusLabel1.Text = "Status and Information Strip";
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 34);
+            // 
+            // lblFilePath
+            // 
+            this.lblFilePath.Name = "lblFilePath";
+            this.lblFilePath.Size = new System.Drawing.Size(923, 37);
+            this.lblFilePath.Spring = true;
+            this.lblFilePath.Text = "Status and Information Strip";
+            this.lblFilePath.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 45);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 47);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.ListBoxOutput);
             this.splitContainer1.Panel2.Controls.Add(this.TxtFilePath);
-            this.splitContainer1.Size = new System.Drawing.Size(1042, 526);
+            this.splitContainer1.Size = new System.Drawing.Size(1042, 524);
             this.splitContainer1.SplitterDistance = 347;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -143,7 +152,7 @@
             this.ListBoxOutput.ItemHeight = 29;
             this.ListBoxOutput.Location = new System.Drawing.Point(0, 35);
             this.ListBoxOutput.Name = "ListBoxOutput";
-            this.ListBoxOutput.Size = new System.Drawing.Size(691, 491);
+            this.ListBoxOutput.Size = new System.Drawing.Size(691, 489);
             this.ListBoxOutput.TabIndex = 1;
             // 
             // TxtFilePath
@@ -193,7 +202,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel lblFilePath;
         private System.Windows.Forms.ToolStripMenuItem MenuItemHelp;
         private System.Windows.Forms.ToolStripMenuItem MenuItemAbout;
         private System.Windows.Forms.ToolStripMenuItem MenuItemOpen;
@@ -201,6 +210,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ListBox ListBoxOutput;
         private System.Windows.Forms.TextBox TxtFilePath;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
     }
 }
 

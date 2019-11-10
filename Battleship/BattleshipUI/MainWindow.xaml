@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BattleshipUI"
         mc:Ignorable="d"
-        Title="Battleship – Mark Reynolds" Height="450" Width="800">
+        Title="Battleship – Mark Reynolds" Height="700" Width="800">
     <Window.Background>
         <ImageBrush Stretch="None" ImageSource="Images/battleship_waterview.jpg"/>
     </Window.Background>
@@ -17,33 +17,9 @@
         <Button x:Name="BtnShowSolution" Content="Show Solution" HorizontalAlignment="Left" Height="27" Margin="23,131,0,0" VerticalAlignment="Top" Width="157" Click="BtnShowSolution_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="BtnAboutBattleship" Content="About Battleship" HorizontalAlignment="Left" Height="28" Margin="23,163,0,0" VerticalAlignment="Top" Width="157" Click="BtnAboutBattleship_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="BtnExit" Content="Exit" HorizontalAlignment="Left" Height="28" Margin="23,196,0,0" VerticalAlignment="Top" Width="157" Click="BtnExit_Click" Grid.ColumnSpan="2"/>
-        <Border BorderThickness="5" BorderBrush="Blue" Margin="220,80,10,10" Width="260" Height="260">
+        <Border BorderThickness="5" BorderBrush="Blue" Margin="220,80,10,10" Width="510" Height="510">
             <Canvas HorizontalAlignment="Left" x:Name="ButtonCanvas">
-                <local:GameCell x:Name="GameCell00" Height="50" Width="50" Margin="0,0" />
-                <local:GameCell x:Name="GameCell01" Height="50" Width="50" Margin="50,0" />
-                <local:GameCell x:Name="GameCell02" Height="50" Width="50" Margin="100,0" />
-                <local:GameCell x:Name="GameCell03" Height="50" Width="50" Margin="150,0" />
-                <local:GameCell x:Name="GameCell04" Height="50" Width="50" Margin="200,0" />
-                <local:GameCell x:Name="GameCell10" Height="50" Width="50" Margin="0,50" />
-                <local:GameCell x:Name="GameCell11" Height="50" Width="50" Margin="50,50" />
-                <local:GameCell x:Name="GameCell12" Height="50" Width="50" Margin="100,50" />
-                <local:GameCell x:Name="GameCell13" Height="50" Width="50" Margin="150,50" />
-                <local:GameCell x:Name="GameCell14" Height="50" Width="50" Margin="200,50" />
-                <local:GameCell x:Name="GameCell20" Height="50" Width="50" Margin="0,100" />
-                <local:GameCell x:Name="GameCell21" Height="50" Width="50" Margin="50,100" />
-                <local:GameCell x:Name="GameCell22" Height="50" Width="50" Margin="100,100" />
-                <local:GameCell x:Name="GameCell23" Height="50" Width="50" Margin="150,100" />
-                <local:GameCell x:Name="GameCell24" Height="50" Width="50" Margin="200,100" />
-                <local:GameCell x:Name="GameCell30" Height="50" Width="50" Margin="0,150" />
-                <local:GameCell x:Name="GameCell31" Height="50" Width="50" Margin="50,150" />
-                <local:GameCell x:Name="GameCell32" Height="50" Width="50" Margin="100,150" />
-                <local:GameCell x:Name="GameCell33" Height="50" Width="50" Margin="150,150" />
-                <local:GameCell x:Name="GameCell34" Height="50" Width="50" Margin="200,150" />
-                <local:GameCell x:Name="GameCell40" Height="50" Width="50" Margin="0,200" />
-                <local:GameCell x:Name="GameCell41" Height="50" Width="50" Margin="50,200" />
-                <local:GameCell x:Name="GameCell42" Height="50" Width="50" Margin="100,200" />
-                <local:GameCell x:Name="GameCell43" Height="50" Width="50" Margin="150,200" />
-                <local:GameCell x:Name="GameCell44" Height="50" Width="50" Margin="200,200" />
+                
             </Canvas>
         </Border>
     </Grid>

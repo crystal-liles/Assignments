@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace BinaryTree
 {
@@ -26,6 +27,7 @@ namespace BinaryTree
             else
             {
                 AddTo(_head, value);
+                Debug.WriteLine($"New Head Node for {value}");
             }
 
             _count++;
@@ -46,6 +48,7 @@ namespace BinaryTree
                 {
                     // else add it to the left node
                     AddTo(node.Left, value);
+                    Debug.WriteLine($"Node left was added to the {node.Value} code; new node is for the value { value}");
                 }
             }
             // Case 2: Value is equal to or greater than the current value
@@ -60,6 +63,7 @@ namespace BinaryTree
                 {
                     // else add it to the right node
                     AddTo(node.Right, value);
+                    Debug.WriteLine($"Node right was added to the {node.Value} code; new node is for the value { value}");
                 }
             }
         }

@@ -16,7 +16,7 @@ using System.IO;
 
 namespace AssignmentDemonstratorWinForm
 {
-    public partial class Form1 : Form
+    public partial class Form1: Form
     {
         public Form1()
         {
@@ -25,7 +25,9 @@ namespace AssignmentDemonstratorWinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ResetFieldsAndVisualObjects();
 
+            lblFilePath.Text = Properties.Settings.Default.PreviousFilePath;
         }
 
         private void MenuItemHelp_Click(object sender, EventArgs e)
@@ -43,8 +45,15 @@ namespace AssignmentDemonstratorWinForm
             var openFileDialog = new OpenFileDialog
             {
                 Filter = "Comma Separated Values|*.CSV",
-                Title = "Select the Hundred Names CSV"
+                Title = "Select the Hundred Names CSV",
+                FileName = Properties.Settings.Default.PreviousFilePath
             };
+
+            if (openFileDialog.ShowDialog() != DialogResult.OK) return;
+
+            lblFilePath.Text = openFileDialog.FileName;
+            Properties.Settings.Default.PreviousFilePath = openFileDialog.FileName;
+            Properties.Settings.Default.Save();
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
