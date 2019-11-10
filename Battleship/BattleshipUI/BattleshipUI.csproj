@@ -26,48 +26,48 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\battleship.ico">
+    <Content Include="Images\battleship.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship.png">
+    </Content>
+    <Content Include="Images\battleship.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_bottom.png">
+    </Content>
+    <Content Include="Images\battleship_bottom.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_example.png">
+    </Content>
+    <Content Include="Images\battleship_example.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_horz.png">
+    </Content>
+    <Content Include="Images\battleship_horz.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_icon.ico">
+    </Content>
+    <Content Include="Images\battleship_icon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_left.png">
+    </Content>
+    <Content Include="Images\battleship_left.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_right.png">
+    </Content>
+    <Content Include="Images\battleship_right.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_single.png">
+    </Content>
+    <Content Include="Images\battleship_single.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_tile.png">
+    </Content>
+    <Content Include="Images\battleship_tile.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_top.png">
+    </Content>
+    <Content Include="Images\battleship_top.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_unknown.png">
+    </Content>
+    <Content Include="Images\battleship_unknown.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_vert.png">
+    </Content>
+    <Content Include="Images\battleship_vert.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\battleship_waterview.jpg">
+    </Content>
+    <Content Include="Images\battleship_waterview.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
 
 </Project>
