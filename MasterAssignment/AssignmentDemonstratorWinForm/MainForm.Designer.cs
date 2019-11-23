@@ -58,7 +58,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1042, 47);
+            this.menuStrip1.Size = new System.Drawing.Size(1042, 54);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,25 +69,25 @@
             this.toolStripSeparator1,
             this.MenuItemHelp});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(80, 43);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(80, 46);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // MenuItemOpen
             // 
             this.MenuItemOpen.Name = "MenuItemOpen";
-            this.MenuItemOpen.Size = new System.Drawing.Size(403, 48);
+            this.MenuItemOpen.Size = new System.Drawing.Size(232, 48);
             this.MenuItemOpen.Text = "Open";
             this.MenuItemOpen.Click += new System.EventHandler(this.MenuItemOpen_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(400, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(229, 6);
             // 
             // MenuItemHelp
             // 
             this.MenuItemHelp.Name = "MenuItemHelp";
-            this.MenuItemHelp.Size = new System.Drawing.Size(403, 48);
+            this.MenuItemHelp.Size = new System.Drawing.Size(232, 48);
             this.MenuItemHelp.Text = "E&xit";
             this.MenuItemHelp.Click += new System.EventHandler(this.MenuItemHelp_Click);
             // 
@@ -96,7 +96,7 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemAbout});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(95, 43);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(95, 46);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // MenuItemAbout
@@ -134,14 +134,14 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 47);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 54);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.ListBoxOutput);
             this.splitContainer1.Panel2.Controls.Add(this.TxtFilePath);
-            this.splitContainer1.Size = new System.Drawing.Size(1042, 524);
+            this.splitContainer1.Size = new System.Drawing.Size(1042, 517);
             this.splitContainer1.SplitterDistance = 347;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -152,7 +152,7 @@
             this.ListBoxOutput.ItemHeight = 29;
             this.ListBoxOutput.Location = new System.Drawing.Point(0, 35);
             this.ListBoxOutput.Name = "ListBoxOutput";
-            this.ListBoxOutput.Size = new System.Drawing.Size(691, 489);
+            this.ListBoxOutput.Size = new System.Drawing.Size(691, 482);
             this.ListBoxOutput.TabIndex = 1;
             // 
             // TxtFilePath

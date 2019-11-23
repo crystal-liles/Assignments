@@ -25,7 +25,7 @@ namespace AssignmentDemonstratorWinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ResetFieldsAndVisualObjects();
+            //ResetFieldsAndVisualObjects();
 
             lblFilePath.Text = Properties.Settings.Default.PreviousFilePath;
         }
