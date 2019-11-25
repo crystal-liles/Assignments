@@ -17,7 +17,7 @@
         <Button x:Name="BtnShowSolution" Content="Show Solution" HorizontalAlignment="Left" Height="27" Margin="23,131,0,0" VerticalAlignment="Top" Width="157" Click="BtnShowSolution_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="BtnAboutBattleship" Content="About Battleship" HorizontalAlignment="Left" Height="28" Margin="23,163,0,0" VerticalAlignment="Top" Width="157" Click="BtnAboutBattleship_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="BtnExit" Content="Exit" HorizontalAlignment="Left" Height="28" Margin="23,196,0,0" VerticalAlignment="Top" Width="157" Click="BtnExit_Click" Grid.ColumnSpan="2"/>
-        <Border BorderThickness="5" BorderBrush="Blue" Margin="220,80,10,10" Width="510" Height="510">
+        <Border x:Name="GameBorder"  BorderThickness="5" BorderBrush="Blue" Margin="220,80,10,10">
             <Canvas HorizontalAlignment="Left" x:Name="ButtonCanvas">
                 
             </Canvas>

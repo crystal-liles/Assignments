@@ -88,12 +88,12 @@ namespace BattleshipUI
             ButtonCanvas.Children.Clear();
             for (var row = 0; row < GamePanelSize; row++)
             { 
-                for (var row = 0; row < GamePanelSize; row++)
+                for (var col = 0; col < GamePanelSize; col++)
                 { 
                     var newGameCell = new GameCell 
                     {
                         Name = $"GameCell{row}{col}",
-                        Height = GameCellSize,,
+                        Height = GameCellSize,
                         Width = GameCellSize,
                         Margin = new Thickness
                         {
