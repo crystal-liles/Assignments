@@ -49,14 +49,18 @@ namespace AssignmentDemonstratorWinForm
                 FileName = Properties.Settings.Default.PreviousFilePath
             };
 
+            /*
+             * Prof Reynolds
+             * you have ShowDialog twice. 
+             */
             if (openFileDialog.ShowDialog() != DialogResult.OK) return;
 
             lblFilePath.Text = openFileDialog.FileName;
             Properties.Settings.Default.PreviousFilePath = openFileDialog.FileName;
             Properties.Settings.Default.Save();
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
+            //if (openFileDialog.ShowDialog() == DialogResult.OK)
+            //{
                 ListBoxOutput.Items.Clear();
 
                 TxtFilePath.Text = openFileDialog.SafeFileName;
@@ -68,7 +72,7 @@ namespace AssignmentDemonstratorWinForm
                         ListBoxOutput.Items.Add(oneLineOfText);
                     }
                 }
-            }
+            //}
         }
     }
 }

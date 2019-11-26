@@ -46,6 +46,18 @@ namespace BattleshipUI
 
         private void BtnShowOneCell_Click(object sender, RoutedEventArgs e)
         {
+            /*
+             * ProfReynolds
+             *
+             * replace this
+             * if (gamecell.ShipSegmentShown)
+             * with this
+             * if (!gamecell.ShipSegmentShown)
+             *
+             * and also, exit the foreach after this line:
+             * gamecell.ShipSegmentShown = true;
+             * (use the break; command
+             */
             //MessageBox.Show("BtnShowOneCell_Click Event");
 
             foreach (var userControl in ButtonCanvas.Children)
@@ -85,12 +97,20 @@ namespace BattleshipUI
 
         private void InitializeAndSetupNewGame()
         {
+            /*
+             * ProfReynolds
+             * I dropped-in my code to make this start working
+             */
             ButtonCanvas.Children.Clear();
+
+            GameBorder.Width = GamePanelSize * GameCellSize + GameBorder.BorderThickness.Left * 2;
+            GameBorder.Height = GamePanelSize * GameCellSize + GameBorder.BorderThickness.Top * 2;
+
             for (var row = 0; row < GamePanelSize; row++)
-            { 
+            {
                 for (var col = 0; col < GamePanelSize; col++)
-                { 
-                    var newGameCell = new GameCell 
+                {
+                    var newGameCell = new GameCell
                     {
                         Name = $"GameCell{row}{col}",
                         Height = GameCellSize,
@@ -105,9 +125,6 @@ namespace BattleshipUI
                 }
             }
 
-            GameBorder.Width = GamePanelSize * GameCellSize + GameBorder.BorderThickness.Left * 2;
-            GameBorder.Height = GamePanelSize * GameCellSize + GameBorder.BorderThickness.Top * 2;
-
             foreach (var uc in ButtonCanvas.Children)
             {
                 if (uc is GameCell gc)
@@ -117,88 +134,121 @@ namespace BattleshipUI
                 }
             }
 
+            int[] gamePieces = { 5, 4, 3, 3, 2, 2, 2, 2 };
+
+            var r = new Random();
+
+            foreach (var gamePiece in gamePieces)
             {
-
-                int[] gamePieces = { 5, 4, 3, 3, 2, 2, 2, 2 };
-
-                var r = new Random();
-
-                foreach (var gamePiece in gamePieces)
+                var placementCompleted = false; // used to exit the do...while loop
+                do
                 {
-                    var placementCompleted = false; // used to exit the do...while loop
-                    do
+                    if (r.Next(0, 2) == 0) // attempt to make this one horizontal
                     {
-                        if (r.Next(0, 2) == 0) // attempt to make the one horizontal
-                        {
-                            // Horizontal ships will be defined and placed here
-                            var row = r.Next(0, GamePanelSize); // select random row
-                            var col = r.Next(0, GamePanelSize - gamePiece); // select random col
-                            var cellsAppearEmpty = true; // this may change to false and a new row/col will be selected
-                            // check that each cell is empty (remember, this is a horizontal ship)
-                            for (var cellcol = col; cellcol <= col + gamePiece; cellcol++)
-                            {
-                                var testCell = LocateByRowCol(row, cellcol);
-                                var thisTestCellAppearsEmpty = (testCell.ShipSegment == ShipCellSegment.Water);
-                                cellsAppearEmpty = cellsAppearEmpty &&
-                                                   thisTestCellAppearsEmpty;
-                            }
+                        // Horizontal ships will be defined and placed here
+                        var row = r.Next(0, GamePanelSize); // select random row
+                        var col = r.Next(0, GamePanelSize - gamePiece); // select random col
 
-                            if (cellsAppearEmpty) // so far so good - now set the cells as appropriate
+                        var cellsAppearEmpty = true; // this may change to false and a new row/col will be selected
+
+                        // check that each cell is empty (remember, this is a horizontal ship)
+                        for (var cellcol = col; cellcol <= col + gamePiece; cellcol++)
+                        {
+                            var testCell = LocateByRowCol(row, cellcol);
+                            var thisTestCellAppearsEmpty = (testCell.ShipSegment == ShipCellSegment.Water);
+                            cellsAppearEmpty = cellsAppearEmpty &&
+                                               thisTestCellAppearsEmpty;
+                        }
+
+                        if (cellsAppearEmpty) // so far so good - now set the cells as appropriate
+                        {
+                            // change the _left_ game cell to ShipCellSegment.left
+                            var leftGameCell = LocateByRowCol(row, col); // first segment
+                            leftGameCell.ShipSegment = ShipCellSegment.Left;
+
+                            // change the _right_ game cell to ShipCellSegment.right
+                            var rightGameCell = LocateByRowCol(row, col + gamePiece - 1); // last segment
+                            rightGameCell.ShipSegment = ShipCellSegment.Right;
+
+                            if (gamePiece > 2) // has middle pieces
                             {
-                                // change the _left_ game cell to ShipCellSegment.left
-                                var leftGameCell = LocateByRowCol(row, col); // first segment
-                                leftGameCell.ShipSegment = ShipCellSegment.Left;
-                                // change the _right_ game cell to ShipCellSegment.right
-                                var rightGameCell = LocateByRowCol(row, col + gamePiece - 1); // last segment
-                                rightGameCell.ShipSegment = ShipCellSegment.Right;
-                                if (gamePiece > 2) // has middle pieces
+                                for (var cellcol = col + 1;
+                                    cellcol <= col + gamePiece - 2;
+                                    cellcol++) // the pieces in the middle
                                 {
-                                    for (var cellcol = col + 1;
-                                        cellcol <= col + gamePiece - 2;
-                                        cellcol++) // the pieces in the middle
-                                    {
-                                        var thisGameCell = LocateByRowCol(row, cellcol);
-                                        thisGameCell.ShipSegment = ShipCellSegment.Horizontal;
-                                    }
+                                    var thisGameCell = LocateByRowCol(row, cellcol);
+                                    thisGameCell.ShipSegment = ShipCellSegment.Horizontal;
                                 }
                             }
+
+                            placementCompleted = true;
                         }
-                        else
+                    }
+                    else
+                    {
+                        // Vertical ships will be defined and placed here
+                        var row = r.Next(0, GamePanelSize - gamePiece); // select random row
+                        var col = r.Next(0, GamePanelSize); // select random col
+
+                        var cellsAppearEmpty = true; // this may change to false and a new row/col will be selected
+
+                        // check that each cell is empty (remember, this is a horizontal ship)
+                        for (var cellrow = row; cellrow <= row + gamePiece; cellrow++)
                         {
-                            // Vertical ships will be defined and placed here
-                            var col = r.Next(0, GamePanelSize); // select random col
-                            var row = r.Next(0, GamePanelSize - gamePiece); // select random row
-                            var cellsAppearEmpty = true; // this may change to false and a new row/col will be selected
-                            // check that each cell is empty (remember, this is a vertical ship)
-                            for (var cellrow = row; cellrow <= row + gamePiece; cellrow++)
+                            var testCell = LocateByRowCol(cellrow, col);
+                            var thisTestCellAppearsEmpty = (testCell.ShipSegment == ShipCellSegment.Water);
+                            cellsAppearEmpty = cellsAppearEmpty &&
+                                               thisTestCellAppearsEmpty;
+                        }
+
+                        if (cellsAppearEmpty) // so far so good - now set the cells as appropriate
+                        {
+                            // change the _top_ game cell to ShipCellSegment.left
+                            var topGameCell = LocateByRowCol(row, col); // first segment
+                            topGameCell.ShipSegment = ShipCellSegment.Top;
+
+                            // change the _bottom_ game cell to ShipCellSegment.right
+                            var bottomGameCell = LocateByRowCol(row + gamePiece - 1, col); // last segment
+                            bottomGameCell.ShipSegment = ShipCellSegment.Bottom;
+
+                            if (gamePiece > 2) // has middle pieces
                             {
-                                var testCell = LocateByRowCol(cellrow, col);
-                                var thisTestCellAppearsEmpty = testCell.ShipSegment == ShipCellSegment.Water;
-                                cellsAppearEmpty = cellsAppearEmpty &&
-                                                   thisTestCellAppearsEmpty;
+                                for (var cellrow = row + 1;
+                                    cellrow <= row + gamePiece - 2;
+                                    cellrow++) // the pieces in the middle
+                                {
+                                    var thisGameCell = LocateByRowCol(cellrow, col);
+                                    thisGameCell.ShipSegment = ShipCellSegment.Vertical;
+                                }
                             }
 
-                            if (cellsAppearEmpty) // so far so good - now set the cells as appropriate
-                            {
-                                // change the _right_ game cell to ShipCellSegment.right
-                                var rightGameCell = LocateByRowCol(row, col); // first segment
-                                rightGameCell.ShipSegment = ShipCellSegment.Right;
-                                // change the _right_ game cell to ShipCellSegment.Right
-                                var leftGameCell = LocateByRowCol(row + gamePiece - 1, col); // last segment
-                                leftGameCell.ShipSegment = ShipCellSegment.Left;
-                                if (gamePiece > 2) // has middle pieces
-                                    for (var cellrow = row + 1;
-                                        cellrow <= row + gamePiece - 2;
-                                        cellrow++) // the pieces in the middle
-                                    {
-                                        var thisGameCell = LocateByRowCol(cellrow, col);
-                                        thisGameCell.ShipSegment = ShipCellSegment.Vertical;
-                                    }
-                            }
+                            placementCompleted = true;
                         }
-                    } while (!placementCompleted);
-                }
+                    }
+
+                } while (!placementCompleted);
             }
+
+            //var collectionOfShipSegments = new Collection<ShipSegmentDefinition>
+            //{
+            //    new ShipSegmentDefinition {row = 0, col = 0, shipCellSegment = ShipCellSegment.Left},
+            //    new ShipSegmentDefinition {row = 0, col = 1, shipCellSegment = ShipCellSegment.Horizontal},
+            //    new ShipSegmentDefinition {row = 0, col = 2, shipCellSegment = ShipCellSegment.Horizontal},
+            //    new ShipSegmentDefinition {row = 0, col = 3, shipCellSegment = ShipCellSegment.Right},
+            //    new ShipSegmentDefinition {row = 1, col = 4, shipCellSegment = ShipCellSegment.Top},
+            //    new ShipSegmentDefinition {row = 2, col = 4, shipCellSegment = ShipCellSegment.Vertical},
+            //    new ShipSegmentDefinition {row = 3, col = 4, shipCellSegment = ShipCellSegment.Bottom},
+            //    new ShipSegmentDefinition {row = 4, col = 1, shipCellSegment = ShipCellSegment.Single}
+            //};
+
+            //foreach (var shipSegmentDefinition in collectionOfShipSegments)
+            //{
+            //    SetUserControlSegment(
+            //        shipSegmentDefinition.row,
+            //        shipSegmentDefinition.col,
+            //        shipSegmentDefinition.shipCellSegment);
+            //}
+
 
         }
         private void SetUserControlSegment(int row, int col, ShipCellSegment shipCellSegment)

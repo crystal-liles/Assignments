@@ -51,14 +51,14 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1042, 54);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1191, 52);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,25 +69,25 @@
             this.toolStripSeparator1,
             this.MenuItemHelp});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(80, 46);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(87, 48);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // MenuItemOpen
             // 
             this.MenuItemOpen.Name = "MenuItemOpen";
-            this.MenuItemOpen.Size = new System.Drawing.Size(232, 48);
+            this.MenuItemOpen.Size = new System.Drawing.Size(448, 54);
             this.MenuItemOpen.Text = "Open";
             this.MenuItemOpen.Click += new System.EventHandler(this.MenuItemOpen_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(229, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(445, 6);
             // 
             // MenuItemHelp
             // 
             this.MenuItemHelp.Name = "MenuItemHelp";
-            this.MenuItemHelp.Size = new System.Drawing.Size(232, 48);
+            this.MenuItemHelp.Size = new System.Drawing.Size(448, 54);
             this.MenuItemHelp.Text = "E&xit";
             this.MenuItemHelp.Click += new System.EventHandler(this.MenuItemHelp_Click);
             // 
@@ -96,13 +96,13 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemAbout});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(95, 46);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(104, 48);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // MenuItemAbout
             // 
             this.MenuItemAbout.Name = "MenuItemAbout";
-            this.MenuItemAbout.Size = new System.Drawing.Size(240, 48);
+            this.MenuItemAbout.Size = new System.Drawing.Size(266, 54);
             this.MenuItemAbout.Text = "&About";
             this.MenuItemAbout.Click += new System.EventHandler(this.MenuItemAbout_Click);
             // 
@@ -112,47 +112,50 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
             this.lblFilePath});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 571);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 608);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1042, 48);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1191, 54);
+            this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "Status and Information Strip";
             // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 34);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(114, 38);
             // 
             // lblFilePath
             // 
+            this.lblFilePath.BackColor = System.Drawing.SystemColors.Control;
             this.lblFilePath.Name = "lblFilePath";
-            this.lblFilePath.Size = new System.Drawing.Size(923, 37);
+            this.lblFilePath.Size = new System.Drawing.Size(1056, 41);
             this.lblFilePath.Spring = true;
             this.lblFilePath.Text = "Status and Information Strip";
-            this.lblFilePath.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFilePath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 54);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 58);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.ListBoxOutput);
             this.splitContainer1.Panel2.Controls.Add(this.TxtFilePath);
-            this.splitContainer1.Size = new System.Drawing.Size(1042, 517);
-            this.splitContainer1.SplitterDistance = 347;
+            this.splitContainer1.Size = new System.Drawing.Size(1191, 553);
+            this.splitContainer1.SplitterDistance = 396;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
             // 
             // ListBoxOutput
             // 
             this.ListBoxOutput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListBoxOutput.FormattingEnabled = true;
-            this.ListBoxOutput.ItemHeight = 29;
-            this.ListBoxOutput.Location = new System.Drawing.Point(0, 35);
+            this.ListBoxOutput.ItemHeight = 31;
+            this.ListBoxOutput.Location = new System.Drawing.Point(0, 37);
             this.ListBoxOutput.Name = "ListBoxOutput";
-            this.ListBoxOutput.Size = new System.Drawing.Size(691, 482);
+            this.ListBoxOutput.Size = new System.Drawing.Size(790, 516);
             this.ListBoxOutput.TabIndex = 1;
             // 
             // TxtFilePath
@@ -163,15 +166,15 @@
             this.TxtFilePath.Multiline = true;
             this.TxtFilePath.Name = "TxtFilePath";
             this.TxtFilePath.ReadOnly = true;
-            this.TxtFilePath.Size = new System.Drawing.Size(691, 35);
+            this.TxtFilePath.Size = new System.Drawing.Size(790, 37);
             this.TxtFilePath.TabIndex = 0;
             this.TxtFilePath.Text = "File Path to be seen here.";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 619);
+            this.ClientSize = new System.Drawing.Size(1191, 662);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
