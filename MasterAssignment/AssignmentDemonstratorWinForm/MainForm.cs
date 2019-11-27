@@ -25,8 +25,6 @@ namespace AssignmentDemonstratorWinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //ResetFieldsAndVisualObjects();
-
             lblFilePath.Text = Properties.Settings.Default.PreviousFilePath;
         }
 
@@ -49,30 +47,23 @@ namespace AssignmentDemonstratorWinForm
                 FileName = Properties.Settings.Default.PreviousFilePath
             };
 
-            /*
-             * Prof Reynolds
-             * you have ShowDialog twice. 
-             */
             if (openFileDialog.ShowDialog() != DialogResult.OK) return;
 
             lblFilePath.Text = openFileDialog.FileName;
             Properties.Settings.Default.PreviousFilePath = openFileDialog.FileName;
             Properties.Settings.Default.Save();
 
-            //if (openFileDialog.ShowDialog() == DialogResult.OK)
-            //{
-                ListBoxOutput.Items.Clear();
+            ListBoxOutput.Items.Clear();
 
-                TxtFilePath.Text = openFileDialog.SafeFileName;
-                using (StreamReader sr = File.OpenText(openFileDialog.FileName))
+            TxtFilePath.Text = openFileDialog.SafeFileName;
+            using (StreamReader sr = File.OpenText(openFileDialog.FileName))
+            {
+                var oneLineOfText = "";
+                while ((oneLineOfText = sr.ReadLine()) != null)
                 {
-                    var oneLineOfText = "";
-                    while ((oneLineOfText = sr.ReadLine()) != null)
-                    {
-                        ListBoxOutput.Items.Add(oneLineOfText);
-                    }
+                    ListBoxOutput.Items.Add(oneLineOfText);
                 }
-            //}
+            }
         }
     }
 }

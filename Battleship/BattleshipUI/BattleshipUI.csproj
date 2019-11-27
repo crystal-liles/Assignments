@@ -6,6 +6,10 @@
     <UseWPF>true</UseWPF>
     <ApplicationIcon />
     <StartupObject />
+    <Authors>Crystal Liles</Authors>
+    <Description>Crystal Liles</Description>
+    <Company>Lone Star College</Company>
+    <Copyright>Copyright © 2019</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

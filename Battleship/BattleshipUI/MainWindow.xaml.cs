@@ -14,6 +14,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+/*
+ * Crystal Liles
+ */
+
 namespace BattleshipUI
 {
     /// <summary>
@@ -46,27 +50,14 @@ namespace BattleshipUI
 
         private void BtnShowOneCell_Click(object sender, RoutedEventArgs e)
         {
-            /*
-             * ProfReynolds
-             *
-             * replace this
-             * if (gamecell.ShipSegmentShown)
-             * with this
-             * if (!gamecell.ShipSegmentShown)
-             *
-             * and also, exit the foreach after this line:
-             * gamecell.ShipSegmentShown = true;
-             * (use the break; command
-             */
-            //MessageBox.Show("BtnShowOneCell_Click Event");
-
             foreach (var userControl in ButtonCanvas.Children)
             {
                 if (userControl is GameCell gamecell)
                 {
-                    if (gamecell.ShipSegmentShown)
+                    if(!gamecell.ShipSegmentShown)
                     {
                         gamecell.ShipSegmentShown = true;
+                        break;
                     }
                 }
             }
@@ -74,7 +65,6 @@ namespace BattleshipUI
 
         private void BtnShowSolution_Click(object sender, RoutedEventArgs e)
         {
-            // MessageBox.Show("BtnShowSolution_Click Event");
             foreach (var userControl in ButtonCanvas.Children) // check each element because we cannot shorten this process
             {
                 if (userControl is GameCell gameCell) // is it a GameCell?, then lets call it gameCell
@@ -97,10 +87,7 @@ namespace BattleshipUI
 
         private void InitializeAndSetupNewGame()
         {
-            /*
-             * ProfReynolds
-             * I dropped-in my code to make this start working
-             */
+           
             ButtonCanvas.Children.Clear();
 
             GameBorder.Width = GamePanelSize * GameCellSize + GameBorder.BorderThickness.Left * 2;
@@ -228,28 +215,7 @@ namespace BattleshipUI
 
                 } while (!placementCompleted);
             }
-
-            //var collectionOfShipSegments = new Collection<ShipSegmentDefinition>
-            //{
-            //    new ShipSegmentDefinition {row = 0, col = 0, shipCellSegment = ShipCellSegment.Left},
-            //    new ShipSegmentDefinition {row = 0, col = 1, shipCellSegment = ShipCellSegment.Horizontal},
-            //    new ShipSegmentDefinition {row = 0, col = 2, shipCellSegment = ShipCellSegment.Horizontal},
-            //    new ShipSegmentDefinition {row = 0, col = 3, shipCellSegment = ShipCellSegment.Right},
-            //    new ShipSegmentDefinition {row = 1, col = 4, shipCellSegment = ShipCellSegment.Top},
-            //    new ShipSegmentDefinition {row = 2, col = 4, shipCellSegment = ShipCellSegment.Vertical},
-            //    new ShipSegmentDefinition {row = 3, col = 4, shipCellSegment = ShipCellSegment.Bottom},
-            //    new ShipSegmentDefinition {row = 4, col = 1, shipCellSegment = ShipCellSegment.Single}
-            //};
-
-            //foreach (var shipSegmentDefinition in collectionOfShipSegments)
-            //{
-            //    SetUserControlSegment(
-            //        shipSegmentDefinition.row,
-            //        shipSegmentDefinition.col,
-            //        shipSegmentDefinition.shipCellSegment);
-            //}
-
-
+            
         }
         private void SetUserControlSegment(int row, int col, ShipCellSegment shipCellSegment)
         {
