@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWPF", "Topical Assignment 9\HelloWPF.csproj", "{9C6926E7-2636-404C-A96E-27244CC043FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutWithGrids", "LayoutWithGrids\LayoutWithGrids.csproj", "{C2CC53DB-FF52-48FB-8997-7A10338A7AAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutWithStackPanel", "LayoutWithStackPanel\LayoutWithStackPanel.csproj", "{2A947DF7-5F6B-4A65-A470-66291C8BE5A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrapPanel", "WrapPanel\WrapPanel.csproj", "{8F70E1A3-46B5-46FD-BF5A-D33E70343E51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutWithDockPanels", "LayoutWithDockPanels\LayoutWithDockPanels.csproj", "{B2743B75-8560-480E-9C56-53DF180FA112}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutWithCanvas", "LayoutWithCanvas\LayoutWithCanvas.csproj", "{746D3A97-907E-4B97-909C-D21DB0C919D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockPanel", "DockPanel\DockPanel.csproj", "{5B1C939E-FB36-48D3-9608-0DF2DCAD1860}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C6926E7-2636-404C-A96E-27244CC043FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C6926E7-2636-404C-A96E-27244CC043FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C6926E7-2636-404C-A96E-27244CC043FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C6926E7-2636-404C-A96E-27244CC043FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2CC53DB-FF52-48FB-8997-7A10338A7AAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2CC53DB-FF52-48FB-8997-7A10338A7AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2CC53DB-FF52-48FB-8997-7A10338A7AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2CC53DB-FF52-48FB-8997-7A10338A7AAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A947DF7-5F6B-4A65-A470-66291C8BE5A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A947DF7-5F6B-4A65-A470-66291C8BE5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A947DF7-5F6B-4A65-A470-66291C8BE5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A947DF7-5F6B-4A65-A470-66291C8BE5A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F70E1A3-46B5-46FD-BF5A-D33E70343E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F70E1A3-46B5-46FD-BF5A-D33E70343E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F70E1A3-46B5-46FD-BF5A-D33E70343E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F70E1A3-46B5-46FD-BF5A-D33E70343E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2743B75-8560-480E-9C56-53DF180FA112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2743B75-8560-480E-9C56-53DF180FA112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2743B75-8560-480E-9C56-53DF180FA112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2743B75-8560-480E-9C56-53DF180FA112}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746D3A97-907E-4B97-909C-D21DB0C919D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746D3A97-907E-4B97-909C-D21DB0C919D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746D3A97-907E-4B97-909C-D21DB0C919D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746D3A97-907E-4B97-909C-D21DB0C919D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B1C939E-FB36-48D3-9608-0DF2DCAD1860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B1C939E-FB36-48D3-9608-0DF2DCAD1860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B1C939E-FB36-48D3-9608-0DF2DCAD1860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B1C939E-FB36-48D3-9608-0DF2DCAD1860}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9675D526-4539-40AB-BF54-608A381C543E}
+	EndGlobalSection
+EndGlobal
