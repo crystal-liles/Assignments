@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BattleshipUI"
         mc:Ignorable="d"
-        Title="Battleship – Mark Reynolds" Height="700" Width="800">
+        Title="Battleship – Crystal Liles" Height="700" Width="800">
     <Window.Background>
         <ImageBrush Stretch="None" ImageSource="Images/battleship_waterview.jpg"/>
     </Window.Background>
@@ -22,5 +22,23 @@
                 
             </Canvas>
         </Border>
+        <StackPanel Margin="23,239,620,332">
+            <RadioButton Name="RadioButton10X10"
+                         GroupName="rtbn"
+                         Content="10 x 10 Grid"
+                         Checked="radioButton_CheckedChanged"/>
+            <RadioButton Name="RadioButton8X8"
+                         GroupName="rtbn"
+                         Content="8 x 8 Grid"
+                         Checked="radioButton_CheckedChanged"/>
+            <RadioButton Name="RadioButton6X6"
+                         GroupName="rtbn"
+                         Content="6 x 6 Grid"
+                         Checked="radioButton_CheckedChanged"/>
+            <RadioButton Name="RadioButton4X4"
+                         GroupName="rtbn"
+                         Content="4 x 4 Grid"
+                         Checked="radioButton_CheckedChanged"/>
+        </StackPanel>
     </Grid>
 </Window>

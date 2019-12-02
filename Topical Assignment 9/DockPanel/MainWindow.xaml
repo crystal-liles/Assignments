@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DockPanel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Crystal Liles" Height="450" Width="800">
     <DockPanel>
         <Button Height="25" Background="red" DockPanel.Dock="Top" />
         <Button Width="25" Background="orange" DockPanel.Dock="Left" />
