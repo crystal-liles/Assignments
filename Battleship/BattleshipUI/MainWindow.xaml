@@ -26,19 +26,24 @@
             <RadioButton Name="RadioButton10X10"
                          GroupName="rtbn"
                          Content="10 x 10 Grid"
-                         Checked="radioButton_CheckedChanged"/>
+                         Checked="radioButton_CheckedChanged" 
+                         FontWeight="Bold"/>
             <RadioButton Name="RadioButton8X8"
                          GroupName="rtbn"
                          Content="8 x 8 Grid"
-                         Checked="radioButton_CheckedChanged"/>
+                         IsChecked="True"
+                         Checked="radioButton_CheckedChanged"
+                         FontWeight="Bold"/>
             <RadioButton Name="RadioButton6X6"
                          GroupName="rtbn"
                          Content="6 x 6 Grid"
-                         Checked="radioButton_CheckedChanged"/>
+                         Checked="radioButton_CheckedChanged"
+                         FontWeight="Bold"/>
             <RadioButton Name="RadioButton4X4"
                          GroupName="rtbn"
                          Content="4 x 4 Grid"
-                         Checked="radioButton_CheckedChanged"/>
+                         Checked="radioButton_CheckedChanged"
+                         FontWeight="Bold"/>
         </StackPanel>
     </Grid>
 </Window>

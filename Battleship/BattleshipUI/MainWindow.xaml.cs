@@ -25,8 +25,10 @@ namespace BattleshipUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const int GameCellSize = 60; // this is the size of the game cell - previously it was always 50
+        private const int GameCellSize = 50; // this is the size of the game cell - previously it was always 50
         private int GamePanelSize = 0; // this is the number of rows and columns, previously, this was always 10
+        private int[] _gamePieces;
+
         private struct ShipSegmentDefinition
         {
             public int row;
@@ -121,7 +123,7 @@ namespace BattleshipUI
                 }
             }
 
-            int[] gamePieces = { 5, 4, 3, 3, 2, 2, 2, 2 };
+            int[] gamePieces = _gamePieces;
 
             var r = new Random();
 
@@ -247,9 +249,8 @@ namespace BattleshipUI
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            if (sender is RadioButton rbtn)
+            if (sender is RadioButton rtbn)
             {
-                if (!rtbn.Checked) return;
                 switch (rtbn.Name)
                 {
                     case "RadioButton10X10":
