@@ -52,6 +52,13 @@
     <Compile Include="Connect Four.Designer.cs">
       <DependentUpon>Connect Four.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="GameCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameCell.Designer.cs">
+      <DependentUpon>GameCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Connect Four.resx">

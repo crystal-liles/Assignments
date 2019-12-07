@@ -14,7 +14,7 @@ namespace BattleshipUI
     /// </summary>
     public enum ShipCellSegment
     {
-        Unknown, // added in assignment 6
+        Unknown,
         Water,
         Single,
         Left,
