@@ -24,6 +24,14 @@ namespace Topical_Assignment_10___Connect_Four
         /// </summary>
         public static int ToInt(string x)
         {
+            /*
+             * ProfReynolds
+             * This is ONE way to incorporate the extension method.
+             * Recommend you:
+             * 1) include the CoreFramework library, or
+             * 2) place  this in a separate class file
+             * and dont forget the semicolon
+             */
             Convert.ToInt32(x)
         }
     }

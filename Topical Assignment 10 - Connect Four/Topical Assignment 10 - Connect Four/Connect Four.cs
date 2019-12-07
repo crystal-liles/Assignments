@@ -21,7 +21,16 @@ namespace Topical_Assignment_10___Connect_Four
         {
             if (sender is TextBox tbox)
             {
+                /*
+                 * ProfReynolds
+                 * ToInt is in the CoreFramewok library. This needs to be included
+                 */
                 var suggestedColumns = tbox.Text.ToInt();
+
+                /*
+                 * ProfReynolds
+                 * .Cancel is part of the TextValidating
+                 */
                 e.Cancel = suggestedColumns < 5 || suggestedColumns > 10;
             }
         }
@@ -31,6 +40,10 @@ namespace Topical_Assignment_10___Connect_Four
         {
             if (sender is TextBox tbox)
             {
+                /*
+                 * Prof Reynold
+                 * see above
+                 */
                 var suggestedRows = tbox.Text.ToInt();
                 e.Cancel = suggestedRows < 4 || suggestedRows > 8;
             }
