@@ -4,6 +4,14 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <Copyright>Copyright © 2019</Copyright>
+
+    <Description>Crystal Liles</Description>
+
+    <Authors>Crystal Liles</Authors>
+
+    <Company>Lone Star College</Company>
   </PropertyGroup>
 
   <ItemGroup>

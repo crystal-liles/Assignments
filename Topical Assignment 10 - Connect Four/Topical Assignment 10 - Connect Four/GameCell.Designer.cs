@@ -49,37 +49,5 @@ namespace Topical_Assignment_10___Connect_Four
                 DisplayButtonBackground();
             }
         }
-
-        private void DisplayButtonBackground()
-        {
-            switch (_gameCellStates)
-            {
-                case GameCellStates.Clear:
-                {
-                        /*
-                         * var uri = 
-                         * var bitmapImage = new BitmapImage(**image**)
-                         * var brush = new ImageBrush();
-                         * brush.ImageSource = bitmapImage;
-                         * brush.Stretch = Stretch.Fill;
-                         * BtnCellSegment.Background = brush;
-                         */
-                        break;
-                }
-                case GameCellStates.Computer:
-                {
-                    break;
-                }
-                case GameCellStates.Error:
-                {
-                    break;
-                }
-                case GameCellStates.Player:
-                {
-                    break;
-                }
-            }
-            
-        }
     }
 }

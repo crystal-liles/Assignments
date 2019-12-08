@@ -36,6 +36,7 @@
             this.rowTxt = new System.Windows.Forms.TextBox();
             this.columnTxt = new System.Windows.Forms.TextBox();
             this.newGameBtn = new System.Windows.Forms.Button();
+            this.pnlGameGrid = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // playerName
@@ -103,13 +104,23 @@
             this.newGameBtn.TabIndex = 6;
             this.newGameBtn.Text = "New Game";
             this.newGameBtn.UseVisualStyleBackColor = true;
+            this.newGameBtn.Click += new System.EventHandler(this.newGameBtn_Click);
+            // 
+            // pnlGameGrid
+            // 
+            this.pnlGameGrid.Location = new System.Drawing.Point(468, 112);
+            this.pnlGameGrid.Name = "pnlGameGrid";
+            this.pnlGameGrid.Size = new System.Drawing.Size(577, 395);
+            this.pnlGameGrid.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1141, 551);
+            this.Controls.Add(this.pnlGameGrid);
             this.Controls.Add(this.newGameBtn);
             this.Controls.Add(this.columnTxt);
             this.Controls.Add(this.rowTxt);
@@ -138,6 +149,7 @@
         private System.Windows.Forms.TextBox rowTxt;
         private System.Windows.Forms.TextBox columnTxt;
         private System.Windows.Forms.Button newGameBtn;
+        private System.Windows.Forms.Panel pnlGameGrid;
     }
 }
 

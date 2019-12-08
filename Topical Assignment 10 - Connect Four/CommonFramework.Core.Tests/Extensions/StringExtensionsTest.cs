@@ -10,7 +10,7 @@ using NUnit.Framework;
 using Shouldly;
 
 /*
- * ProfReynolds
+ * Crystal Liles
  */
 
 namespace CommonFramework.Core.Tests.Extensions
