@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace Topical_Assignment_10___Connect_Four
 {
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
     static class Program
     {
         /// <summary>
@@ -20,6 +23,7 @@ namespace Topical_Assignment_10___Connect_Four
             Application.Run(new Form1());
         }
 
+        private int _gameCells;
         private void InitializeAndSetupNewGame()
         {
             _gameCells.Clear(); // resets the collection of game cells
@@ -43,20 +47,5 @@ namespace Topical_Assignment_10___Connect_Four
             }
         }
 
-        /// <summary>
-/// Convert a string to an integer
-/// </summary>
-public static int ToInt(string x)
-        {
-            /*
-             * ProfReynolds
-             * This is ONE way to incorporate the extension method.
-             * Recommend you:
-             * 1) include the CoreFramework library, or
-             * 2) place  this in a separate class file
-             * and dont forget the semicolon
-             */
-            Convert.ToInt32(x)
-        }
     }
 }

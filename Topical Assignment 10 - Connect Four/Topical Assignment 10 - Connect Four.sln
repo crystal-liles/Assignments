@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topical Assignment 10 - Connect Four", "Topical Assignment 10 - Connect Four\Topical Assignment 10 - Connect Four.csproj", "{827F4B56-48CD-4B01-8B35-3E475D806741}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonFramework.Core", "CommonFramework.Core\CommonFramework.Core.csproj", "{E5F8B8E9-C7FE-4416-BAC2-12EDD81CD86C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonFramework.Core.Tests", "CommonFramework.Core.Tests\CommonFramework.Core.Tests.csproj", "{F744F934-FAA3-4192-BB88-AEB2392109F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{827F4B56-48CD-4B01-8B35-3E475D806741}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{827F4B56-48CD-4B01-8B35-3E475D806741}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{827F4B56-48CD-4B01-8B35-3E475D806741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5F8B8E9-C7FE-4416-BAC2-12EDD81CD86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F8B8E9-C7FE-4416-BAC2-12EDD81CD86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F8B8E9-C7FE-4416-BAC2-12EDD81CD86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F8B8E9-C7FE-4416-BAC2-12EDD81CD86C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F744F934-FAA3-4192-BB88-AEB2392109F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F744F934-FAA3-4192-BB88-AEB2392109F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F744F934-FAA3-4192-BB88-AEB2392109F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F744F934-FAA3-4192-BB88-AEB2392109F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
