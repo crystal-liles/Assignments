@@ -1,0 +1,15 @@
+﻿
+Prof Reynolds:
+
+you are not required to have the CommonFrameworkk.Core.Test for this assignment.
+
+you ___should___ always include unit tests, but not required this time.
+
+But  there are no tests to run! This project is empty.
+
+-----------------
+
+
+I added the Numeric Extensions and the unit tests.
+
+I also added the nuget package Shouldly

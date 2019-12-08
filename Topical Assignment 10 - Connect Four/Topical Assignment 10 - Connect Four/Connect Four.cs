@@ -18,14 +18,16 @@ namespace Topical_Assignment_10___Connect_Four
             InitializeComponent();
         }
 
-        private void columnTxt_TextChanged(object sender, EventArgs e)
+        /*
+         * ProfReynolds
+         * I changed the event from TextChanged to Validating. The Validating event supports the.Cancel property
+         * I moved your code into this Validating event
+         */
+
+        private void columnTxt_Validating(object sender, CancelEventArgs e)
         {
             if (sender is TextBox tbox)
             {
-                /*
-                 * ProfReynolds
-                 * ToInt is in the CoreFramewok library. This needs to be included
-                 */
                 var suggestedColumns = tbox.Text.ToInt();
 
                 /*
@@ -36,13 +38,12 @@ namespace Topical_Assignment_10___Connect_Four
             }
         }
 
-        
-        private void rowTxt_TextChanged(object sender, EventArgs e)
+        private void rowTxt_Validating(object sender, CancelEventArgs e)
         {
             if (sender is TextBox tbox)
             {
                 /*
-                 * Prof Reynold
+                 * ProfReynolds
                  * see above
                  */
                 var suggestedRows = tbox.Text.ToInt();
