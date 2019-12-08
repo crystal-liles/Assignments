@@ -22,8 +22,8 @@ namespace Topical_Assignment_10___Connect_Four
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
-
-        private int _gameCells;
+        
+        private int[] _gameCells = gameCells;
         private void InitializeAndSetupNewGame()
         {
             _gameCells.Clear(); // resets the collection of game cells

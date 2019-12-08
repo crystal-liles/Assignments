@@ -38,9 +38,9 @@ namespace Topical_Assignment_10___Connect_Four
 
         public int GameCellRow { get; set; }
         public int GameCellCol { get; set; }
-        private GameCellStates _gameCellStates = GameCellStates.Clear
+        private GameCellStates _gameCellStates = GameCellStates.Clear;
 
-        public GameCellStates GameCellStates
+        public GameCellStates GameCellState
         {
             get => _gameCellStates;
             set
