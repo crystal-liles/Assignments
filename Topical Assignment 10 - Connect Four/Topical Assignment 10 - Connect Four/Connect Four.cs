@@ -44,8 +44,14 @@ namespace Topical_Assignment_10___Connect_Four
             InitializeAndSetupNewGame();
         }
 
-        private Collection<GameCell> _gameCells { get; set; }
-        
+        /*
+         * ProfReynolds
+         * I changed this property into a class field
+         * this fixes the "_gameCells.Clear();" below
+         */
+        // private Collection<GameCell> _gameCells { get; set; }
+        private Collection<GameCell> _gameCells =new Collection<GameCell>();
+
 
         private void InitializeAndSetupNewGame()
         {
