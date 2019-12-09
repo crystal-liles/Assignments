@@ -64,6 +64,9 @@
     <EmbeddedResource Include="Connect Four.resx">
       <DependentUpon>Connect Four.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameCell.resx">
+      <DependentUpon>GameCell.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -72,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,8 +96,9 @@
       <Name>CommonFramework.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Include="Images\gamecellstates_clear.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

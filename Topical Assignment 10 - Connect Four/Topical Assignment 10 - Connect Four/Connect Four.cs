@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommonFramework.Core;
-using Topical_Assignment_10___Connect_Four.Properties;
 
 namespace Topical_Assignment_10___Connect_Four
 {
@@ -44,13 +43,7 @@ namespace Topical_Assignment_10___Connect_Four
             InitializeAndSetupNewGame();
         }
 
-        /*
-         * ProfReynolds
-         * I changed this property into a class field
-         * this fixes the "_gameCells.Clear();" below
-         */
-        // private Collection<GameCell> _gameCells { get; set; }
-        private Collection<GameCell> _gameCells =new Collection<GameCell>();
+        private Collection<GameCell> _gameCells = new Collection<GameCell>();
 
 
         private void InitializeAndSetupNewGame()
@@ -71,9 +64,12 @@ namespace Topical_Assignment_10___Connect_Four
                         GameCellCol = col,
                         GameCellState = GameCellStates.Clear,
                         Location = new Point(col * 90, row * 80)
+
                     };
                     _gameCells.Add(newGameCell);
                     pnlGameGrid.Controls.Add(newGameCell);
+                    //newGameCell.Click += new System.EventHandler(this.gamecell_Click);
+
                 }
             }
         }

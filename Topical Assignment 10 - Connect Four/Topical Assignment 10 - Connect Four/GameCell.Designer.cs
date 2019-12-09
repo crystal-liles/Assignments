@@ -30,8 +30,21 @@ namespace Topical_Assignment_10___Connect_Four
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // GameCell
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackgroundImage = global::Topical_Assignment_10___Connect_Four.Properties.Resources.gamecellstates_clear;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Margin = new System.Windows.Forms.Padding(0);
+            this.Name = "GameCell";
+            this.Size = new System.Drawing.Size(80, 80);
+            this.Load += new System.EventHandler(this.gamecell_Click);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
